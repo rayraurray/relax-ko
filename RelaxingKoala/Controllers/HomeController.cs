@@ -23,11 +23,6 @@ namespace RelaxingKoala.Controllers
             return View();
         }
 
-        public IActionResult Menu()
-        {
-            return View();
-        }
-
         public IActionResult Reservation()
         {
             return View();
@@ -43,5 +38,6 @@ namespace RelaxingKoala.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

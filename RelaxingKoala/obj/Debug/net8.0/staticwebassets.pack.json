@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets\\RelaxingKoala.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\RelaxingKoala.ico",
+      "PackagePath": "staticwebassets\\RelaxingKoala.ico"
     },
     {
-      "Id": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\js\\site.js",

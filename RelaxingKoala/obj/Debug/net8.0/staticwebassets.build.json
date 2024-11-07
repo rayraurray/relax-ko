@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V9eXoHT5xMya25zeW+Pd/fFHlIkrOaUbJ/b5SYntr+0=",
+  "Hash": "ub47VV4KEk2fg8b+TRDzmfZRZ++f3aBl22Z7PjRfJDQ=",
   "Source": "RelaxingKoala",
   "BasePath": "_content/RelaxingKoala",
   "Mode": "Default",
@@ -1214,25 +1214,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\favicon.ico",
-      "SourceId": "RelaxingKoala",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\",
-      "BasePath": "_content/RelaxingKoala",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
       "Identity": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\js\\site.js",
       "SourceId": "RelaxingKoala",
       "SourceType": "Discovered",
@@ -2352,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\RelaxingKoala.ico",
+      "SourceId": "RelaxingKoala",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\wwwroot\\",
+      "BasePath": "_content/RelaxingKoala",
+      "RelativePath": "RelaxingKoala.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RelaxingKoala.ico"
     }
   ]
 }
