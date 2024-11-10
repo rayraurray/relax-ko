@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +22,7 @@ namespace RelaxingKoala.Controllers
         // GET: MenuItems
         public async Task<IActionResult> Index()
         {
-            return View(await _context.MenuItem.ToListAsync());
+            return View(await _context.MenuItems.ToListAsync());
         }
 
         // GET: MenuItems/Details/5
@@ -34,7 +33,7 @@ namespace RelaxingKoala.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItem
+            var menuItem = await _context.MenuItems
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (menuItem == null)
             {
@@ -45,7 +44,6 @@ namespace RelaxingKoala.Controllers
         }
 
         // GET: MenuItems/Create
-        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -54,7 +52,6 @@ namespace RelaxingKoala.Controllers
         // POST: MenuItems/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Price")] MenuItem menuItem)
@@ -76,7 +73,7 @@ namespace RelaxingKoala.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItem.FindAsync(id);
+            var menuItem = await _context.MenuItems.FindAsync(id);
             if (menuItem == null)
             {
                 return NotFound();
@@ -120,7 +117,6 @@ namespace RelaxingKoala.Controllers
         }
 
         // GET: MenuItems/Delete/5
-        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -128,7 +124,7 @@ namespace RelaxingKoala.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItem
+            var menuItem = await _context.MenuItems
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (menuItem == null)
             {
@@ -139,15 +135,14 @@ namespace RelaxingKoala.Controllers
         }
 
         // POST: MenuItems/Delete/5
-        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var menuItem = await _context.MenuItem.FindAsync(id);
+            var menuItem = await _context.MenuItems.FindAsync(id);
             if (menuItem != null)
             {
-                _context.MenuItem.Remove(menuItem);
+                _context.MenuItems.Remove(menuItem);
             }
 
             await _context.SaveChangesAsync();
@@ -156,7 +151,7 @@ namespace RelaxingKoala.Controllers
 
         private bool MenuItemExists(int id)
         {
-            return _context.MenuItem.Any(e => e.Id == id);
+            return _context.MenuItems.Any(e => e.Id == id);
         }
     }
 }

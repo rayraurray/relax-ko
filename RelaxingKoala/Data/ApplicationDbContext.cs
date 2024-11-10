@@ -10,6 +10,7 @@ namespace RelaxingKoala.Data
             : base(options)
         {
         }
-        public DbSet<RelaxingKoala.Models.MenuItem> MenuItem { get; set; } = default!;
+
+        public DbSet<MenuItem> MenuItems { get; set; }
     }
 }

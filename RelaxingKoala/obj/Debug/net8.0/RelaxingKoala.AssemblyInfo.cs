@@ -12,11 +12,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-RelaxingKoala-02cc9cd9-2b87-4b14-8f5e-2f3a0a258fbf")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-RelaxingKoala-8d361f29-db10-485e-993f-8f05be88744a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d13ede607fa47435b9d13e0b0ed698aefcf6e303")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

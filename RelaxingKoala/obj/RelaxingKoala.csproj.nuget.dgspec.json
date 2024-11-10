@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj": {}
+    "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj": {
+    "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj",
         "projectName": "RelaxingKoala",
-        "projectPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj",
+        "projectPath": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\RelaxingKoala\\RelaxingKoala\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,19 +47,23 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
