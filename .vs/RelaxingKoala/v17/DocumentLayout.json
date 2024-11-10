@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110123411_InitialSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RelaxingKoala\\Data\\Migrations\\20241110123411_InitialSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,6 +81,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\relaxingkoala\\relaxingkoala\\relaxingkoala.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\relaxingkoala.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\relaxingkoala\\relaxingkoala\\data\\migrations\\20241110124336_initialsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\data\\migrations\\20241110124336_initialsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Program.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Program.cs",
@@ -107,12 +107,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T05:50:22.727Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\appsettings.json",
               "RelativeDocumentMoniker": "RelaxingKoala\\appsettings.json",
@@ -134,8 +133,7 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAgAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-10T05:59:24.292Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -144,19 +142,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20241110124336_InitialSetup.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
-              "RelativeToolTip": "RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T12:43:36.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "20241110123411_InitialSetup.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110123411_InitialSetup.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110123411_InitialSetup.cs",
@@ -164,12 +149,11 @@
               "RelativeToolTip": "RelaxingKoala\\Data\\Migrations\\20241110123411_InitialSetup.cs",
               "ViewState": "AQIAAOYCAAAAAAAAAAAUwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T12:34:11.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T12:34:11.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\ApplicationDbContext.cs",
@@ -177,12 +161,11 @@
               "RelativeToolTip": "RelaxingKoala\\Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T05:45:33.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T05:45:33.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -190,8 +173,7 @@
               "RelativeToolTip": "RelaxingKoala\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T05:57:40.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T05:57:40.955Z"
             },
             {
               "$type": "Document",
@@ -208,7 +190,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
+              "Title": "20241110124336_InitialSetup.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
+              "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
+              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
+              "RelativeToolTip": "RelaxingKoala\\Data\\Migrations\\20241110124336_InitialSetup.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T12:43:36.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "20241110062549_AddMenuItem.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110062549_AddMenuItem.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110062549_AddMenuItem.cs",
@@ -220,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "00000000000000_CreateIdentitySchema.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
@@ -228,12 +222,11 @@
               "RelativeToolTip": "RelaxingKoala\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "ViewState": "AQIAAMMAAAAAAAAAAAA1wI4AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T05:57:42.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T05:57:42.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "20241110063100_InitalSetup.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110063100_InitalSetup.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110063100_InitalSetup.cs",
@@ -245,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "RelaxingKoala\\Properties\\launchSettings.json",
@@ -257,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "20241110061254_AddMenuItem.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110061254_AddMenuItem.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110061254_AddMenuItem.cs",
@@ -269,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Models\\ErrorViewModel.cs",
@@ -281,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "RelaxingKoala\\Views\\_ViewImports.cshtml",
@@ -293,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "RelaxingKoala\\Views\\_ViewStart.cshtml",
@@ -305,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "MenuItemsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Controllers\\MenuItemsController.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Controllers\\MenuItemsController.cs",
@@ -317,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "20241110060206_InitialSetup.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110060206_InitialSetup.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110060206_InitialSetup.cs",
@@ -329,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "20241110060116_InitialSetup.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Data\\Migrations\\20241110060116_InitialSetup.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Data\\Migrations\\20241110060116_InitialSetup.cs",
@@ -341,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Shared\\Error.cshtml",
@@ -353,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "RelaxingKoala.csproj",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\RelaxingKoala\\RelaxingKoala\\RelaxingKoala.csproj",
               "RelativeDocumentMoniker": "RelaxingKoala\\RelaxingKoala.csproj",
