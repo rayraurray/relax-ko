@@ -1,0 +1,11 @@
+﻿@model Statistics
+@{
+	ViewBag.Title = "Delete Statistics";
+}
+
+<h1>Are you sure you want to Delete this Statistic</h1>
+
+<form asp-action="Delete" method="post">
+	<input type="hidden" name="statisticsId" asp-for="@Model.StatisticsId" />
+	<button type="submit" class="btn btn-danger">Delete Statistic</button>
+</form>

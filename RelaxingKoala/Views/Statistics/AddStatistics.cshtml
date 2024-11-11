@@ -1,0 +1,31 @@
+﻿@model Statistics
+<h1>Add New Statistics</h1>
+
+<form asp-action="AddStatistics" method="post">
+
+    @foreach (var menuItem in ViewBag.MenuItems as List<MenuItem>)
+    {
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="@menuItem.MenuItemId" name="assignedMenuItem" value="@menuItem.MenuItemId" />
+            <label class="form-check-label" for="@menuItem.MenuItemId">@menuItem.Name</label>
+        </div>
+    }
+
+    <div>
+        <label asp-for="NumberOfOrders">Number Of Orders</label>
+        <input asp-for="NumberOfOrders" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="AverageOrderTime">Average Order Time</label>
+        <input asp-for="AverageOrderTime" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="RecordedDate">Recorded Date</label>
+        <input asp-for="RecordedDate" class="form-control" type="date" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Statistics</button>
+
+</form>

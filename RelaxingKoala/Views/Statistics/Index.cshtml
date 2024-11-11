@@ -1,13 +1,13 @@
-﻿@model List<Menu>  
+﻿@model List<Statistics>
 @{
-	ViewBag.Title = "Menus";
+    ViewBag.Title = "Statistics";
 }
 
-@* THIS IS MENU *@
+@* THIS IS STATISTICS *@
 
-<a asp-action="AssignMenu" class="btn btn-primary">Add New Menu</a>
+<a asp-action="AddStatistics" class="btn btn-primary">Add New Statistics</a>
 
-<h1>List of Menus</h1>
+<h1>List of Statistics</h1>
 
 <form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
     <div>
@@ -36,9 +36,8 @@
         var selectElement = document.getElementById('menuItemSelect');
         //Add event listener for change event
         selectElement.addEventListener(
-            'change', 
-            function () 
-            {
+            'change',
+            function () {
                 var formElement = document.getElementById('menuItemForm');
                 formElement.submit();
             }
@@ -48,26 +47,30 @@
 </form>
 
 <table class="table table-striped">
-	<thead>
-		<th>Name</th>
-		<th>Description</th>
-		<th>Menu Items</th>
-        <th>Delete</th>
-	</thead>
+    <thead>
+    <th>Menu Item</th>
+    <th>Number Of Orders</th>
+    <th>AverageOrderTime</th>
+    <th>Recorded Date</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
 
-	<tbody>
-		@foreach (var menu in Model)
-		{
-			<tr>
-				<td>@menu.Name</td>
-				<td>@menu.Description</td>
-				<td>
-					<a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu Items</a>
-				</td>
+    <tbody>
+        @foreach (var stat in Model)
+        {
+            <tr>
+                <td>@stat.MenuItem.Name</td>
+                <td>@stat.NumberOfOrders</td>
+                <td>@stat.AverageOrderTime</td>
+                <td>@stat.RecordedDate</td>
                 <td>
-                    <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
+                    <a asp-action="EditStatistics" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn btn-info">Edit Statistics</a>
                 </td>
-			</tr>
-		}
-	</tbody>
+                <td>
+                    <a asp-action="Delete" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

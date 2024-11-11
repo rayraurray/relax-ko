@@ -15,8 +15,9 @@ namespace RelaxingKoala.Data
         public DbSet<Menu> Menus { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Kitchen> Kitchens { get; set; }
+		public DbSet<Statistics> Statistics { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+		protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
@@ -73,6 +74,22 @@ namespace RelaxingKoala.Data
                 k5, 
                 k6
             );
-        }
+
+			var stat1 = new Statistics { StatisticsId = 1, MenuItemId = 1, NumberOfOrders = 150, AverageOrderTime = 20, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-1)) };
+			var stat2 = new Statistics { StatisticsId = 2, MenuItemId = 2, NumberOfOrders = 120, AverageOrderTime = 18, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-3)) };
+			var stat3 = new Statistics { StatisticsId = 3, MenuItemId = 3, NumberOfOrders = 100, AverageOrderTime = 22, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-2)) };
+			var stat4 = new Statistics { StatisticsId = 4, MenuItemId = 4, NumberOfOrders = 80, AverageOrderTime = 25, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-22)) };
+			var stat5 = new Statistics { StatisticsId = 5, MenuItemId = 5, NumberOfOrders = 60, AverageOrderTime = 15, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-13)) };
+			var stat6 = new Statistics { StatisticsId = 6, MenuItemId = 6, NumberOfOrders = 90, AverageOrderTime = 20, RecordedDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-30)) };
+
+			builder.Entity<Statistics>().HasData(
+				stat1,
+				stat2,
+				stat3,
+				stat4,
+				stat5,
+				stat6
+			);
+		}
     }
 }
