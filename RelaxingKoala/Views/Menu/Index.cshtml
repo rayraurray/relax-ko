@@ -1,0 +1,71 @@
+﻿@model List<Menu>  
+@{
+	ViewBag.Title = "Menus";
+}
+
+@* THIS IS MENU *@
+
+<a asp-action="AssignMenu" class="btn btn-primary">Add New Menu</a>
+
+<h1>List of Menus</h1>
+
+<form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
+    <div>
+        <label class="form-label">Filter With Menu Item</label>
+
+        <select class="form-control" id="menuItemSelect" name="menuItemId">
+
+            <option value="">Select Menu Item</option>
+
+            @foreach (MenuItem menuItem in ViewBag.MenuItems)
+            {
+                if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                {
+                    <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                }
+                else
+                {
+                    <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                }
+            }
+
+        </select>
+    </div>
+
+    <script>
+        var selectElement = document.getElementById('menuItemSelect');
+        //Add event listener for change event
+        selectElement.addEventListener('change', function () 
+        {
+            var formElement = document.getElementById('menuItemForm');
+            formElement.submit();
+        }
+        )
+    </script>
+
+</form>
+
+<table class="table table-striped">
+	<thead>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Menu Items</th>
+        <th>Delete</th>
+	</thead>
+
+	<tbody>
+		@foreach (var menu in Model)
+		{
+			<tr>
+				<td>@menu.Name</td>
+				<td>@menu.Description</td>
+				<td>
+					<a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu Items</a>
+				</td>
+                <td>
+                    <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
+                </td>
+			</tr>
+		}
+	</tbody>
+</table>

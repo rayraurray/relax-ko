@@ -11,7 +11,7 @@ using RelaxingKoala.Data;
 namespace RelaxingKoala.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241110124336_InitialSetup")]
+    [Migration("20241110181902_InitialSetup")]
     partial class InitialSetup
     {
         /// <inheritdoc />
@@ -19,6 +19,53 @@ namespace RelaxingKoala.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
+
+            modelBuilder.Entity("MenuMenuItem", b =>
+                {
+                    b.Property<int>("ItemsMenuItemId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MenusMenuId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ItemsMenuItemId", "MenusMenuId");
+
+                    b.HasIndex("MenusMenuId");
+
+                    b.ToTable("MenuMenuItem");
+
+                    b.HasData(
+                        new
+                        {
+                            ItemsMenuItemId = 1,
+                            MenusMenuId = 1
+                        },
+                        new
+                        {
+                            ItemsMenuItemId = 2,
+                            MenusMenuId = 1
+                        },
+                        new
+                        {
+                            ItemsMenuItemId = 3,
+                            MenusMenuId = 2
+                        },
+                        new
+                        {
+                            ItemsMenuItemId = 4,
+                            MenusMenuId = 2
+                        },
+                        new
+                        {
+                            ItemsMenuItemId = 5,
+                            MenusMenuId = 3
+                        },
+                        new
+                        {
+                            ItemsMenuItemId = 6,
+                            MenusMenuId = 3
+                        });
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -158,6 +205,9 @@ namespace RelaxingKoala.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
@@ -169,13 +219,7 @@ namespace RelaxingKoala.Data.Migrations
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("LoginProvider", "ProviderKey");
-
-                    b.HasIndex("UserId");
+                    b.HasKey("UserId", "LoginProvider", "ProviderKey");
 
                     b.ToTable("AspNetUserLogins", (string)null);
                 });
@@ -216,13 +260,53 @@ namespace RelaxingKoala.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("RelaxingKoala.Models.MenuItem", b =>
+            modelBuilder.Entity("RelaxingKoala.Models.Menu", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MenuId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MenuId");
+
+                    b.ToTable("Menus");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuId = 1,
+                            Description = "Delicious Meals from the Northern Parts of Italy",
+                            Name = "Italian Menu"
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            Description = "Scrumptiousness By the Ocean",
+                            Name = "Seafood Menu"
+                        },
+                        new
+                        {
+                            MenuId = 3,
+                            Description = "Absolute Healthiness lol",
+                            Name = "Vegan Menu"
+                        });
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.MenuItem", b =>
+                {
+                    b.Property<int>("MenuItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -232,9 +316,68 @@ namespace RelaxingKoala.Data.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("REAL");
 
-                    b.HasKey("Id");
+                    b.HasKey("MenuItemId");
 
                     b.ToTable("MenuItems");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuItemId = 1,
+                            Description = "Classic Italian pasta dish with eggs, cheese, pancetta, and pepper.",
+                            Name = "Spaghetti Carbonara",
+                            Price = 12.99f
+                        },
+                        new
+                        {
+                            MenuItemId = 2,
+                            Description = "Traditional pizza with fresh tomatoes, mozzarella cheese, and basil.",
+                            Name = "Margherita Pizza",
+                            Price = 10.5f
+                        },
+                        new
+                        {
+                            MenuItemId = 3,
+                            Description = "Rich and creamy lobster soup with a hint of sherry.",
+                            Name = "Lobster Bisque",
+                            Price = 15.75f
+                        },
+                        new
+                        {
+                            MenuItemId = 4,
+                            Description = "Fresh Atlantic salmon grilled to perfection with lemon butter sauce.",
+                            Name = "Grilled Salmon",
+                            Price = 18f
+                        },
+                        new
+                        {
+                            MenuItemId = 5,
+                            Description = "Healthy vegan salad with quinoa, avocado, cherry tomatoes, and a light vinaigrette.",
+                            Name = "Quinoa Salad",
+                            Price = 9.5f
+                        },
+                        new
+                        {
+                            MenuItemId = 6,
+                            Description = "Plant-based burger with lettuce, tomato, vegan cheese, and a special sauce.",
+                            Name = "Vegan Burger",
+                            Price = 11.25f
+                        });
+                });
+
+            modelBuilder.Entity("MenuMenuItem", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.MenuItem", null)
+                        .WithMany()
+                        .HasForeignKey("ItemsMenuItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelaxingKoala.Models.Menu", null)
+                        .WithMany()
+                        .HasForeignKey("MenusMenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
