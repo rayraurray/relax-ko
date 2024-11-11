@@ -14,10 +14,12 @@ namespace RelaxingKoala.Models
 
         //Navigation Property
         public List<Menu> Menus { get; set; }
+        public List<Order> Orders { get; set; }
 
         public MenuItem()
         {
             Menus = new List<Menu>();
+            Orders = new List<Order>(); 
         }
     }
 }

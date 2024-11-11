@@ -8482,11 +8482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\RelaxingKoala.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj",
       "projectName": "RelaxingKoala",
-      "projectPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\RelaxingKoala.csproj",
+      "projectPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko\\RelaxingKoala\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -17,111 +17,111 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RelaxingKoala
 build_property.RootNamespace = RelaxingKoala
-build_property.ProjectDir = C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\
+build_property.ProjectDir = C:\Users\Admin\Data\Swinburne\Soft\ASM3\relax-ko\RelaxingKoala\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Data\Swinburne\Soft\ASM3\relax-ko\RelaxingKoala
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Home/Index.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Home/Privacy.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Kitchen/AddKitchen.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Kitchen/AddKitchen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblxBZGRLaXRjaGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Kitchen/Delete.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Kitchen/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Kitchen/EditKitchen.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Kitchen/EditKitchen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblxFZGl0S2l0Y2hlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Kitchen/Index.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Kitchen/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/MenuItem/AssignMenuItem.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/MenuItem/AssignMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cQXNzaWduTWVudUl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/MenuItem/Delete.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/MenuItem/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/MenuItem/EditMenuItem.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/MenuItem/EditMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cRWRpdE1lbnVJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/MenuItem/Index.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/MenuItem/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Menu/AssignMenu.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Menu/AssignMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxBc3NpZ25NZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Menu/Delete.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Menu/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Menu/EditMenu.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Menu/EditMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxFZGl0TWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Menu/Index.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Shared/Error.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Statistics/AddStatistics.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Statistics/AddStatistics.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xBZGRTdGF0aXN0aWNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Statistics/Delete.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Statistics/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Statistics/EditStatistics.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Statistics/EditStatistics.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xFZGl0U3RhdGlzdGljcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Statistics/Index.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Statistics/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/_ViewImports.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/_ViewStart.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Data/Swinburne/Soft/ASM3/current peak/RelaxingKoala/Views/Shared/_Layout.cshtml]
+[C:/Users/Admin/Data/Swinburne/Soft/ASM3/relax-ko/RelaxingKoala/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lsv5jfzpki

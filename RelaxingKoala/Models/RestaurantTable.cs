@@ -2,7 +2,7 @@
 {
 	public class RestaurantTable
 	{
-		public int TableId { get; set; }
+		public int RestaurantTableId { get; set; }
 		public string Name { get; set; }
 
 		// Navigation property
