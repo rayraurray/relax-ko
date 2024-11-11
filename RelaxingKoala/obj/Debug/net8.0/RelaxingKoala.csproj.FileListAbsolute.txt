@@ -1171,3 +1171,4 @@ C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\obj\Debug\net
 C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\obj\Debug\net8.0\RelaxingKoala.pdb
 C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\obj\Debug\net8.0\RelaxingKoala.genruntimeconfig.cache
 C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\obj\Debug\net8.0\ref\RelaxingKoala.dll
+C:\Users\Admin\Data\Swinburne\Soft\ASM3\current peak\RelaxingKoala\obj\Debug\net8.0\RelaxingKoala.sourcelink.json

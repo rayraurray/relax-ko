@@ -1,0 +1,26 @@
+﻿@model MenuItem
+@{
+	ViewBag.Title = "Edit Menu Item";
+}
+
+<h1>Edit Menu Item Details for @Model.Name</h1>
+
+<form asp-action="ModifyMenuItemMenus">
+
+	@foreach (var menu in ViewBag.Menus)
+	{
+		<div class="form-check">
+			@{
+				bool isChecked = Model.Menus.Any(m => m.MenuId == menu.MenuId);
+			}
+
+			<input type="checkbox" class="form-check-input" id="@menu.MenuId" name="assignedMenus" value="@menu.MenuId"
+			@(isChecked ? "checked" : "") />
+
+			<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
+		</div>
+	}
+	<input type="hidden" name="menuItemId" value="@Model.MenuItemId" />
+
+	<button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menu\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menu\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menu\\editmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menu\\editmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menu\\assignmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menu\\assignmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menu\\assignmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menu\\assignmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\controllers\\menuitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\controllers\\menuitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\data\\swinburne\\soft\\asm3\\current peak\\relaxingkoala\\views\\menuitem\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\views\\menuitem\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Models\\Menu.cs",
               "RelativeDocumentMoniker": "RelaxingKoala\\Models\\Menu.cs",
               "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Models\\Menu.cs",
               "RelativeToolTip": "RelaxingKoala\\Models\\Menu.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAgwAcAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T17:56:52.389Z",
               "IsPinned": true,
@@ -64,57 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Controllers\\MenuController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "RelaxingKoala\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAmwHQAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T18:24:41.234Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\EditMenu.cshtml",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Menu\\EditMenu.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\EditMenu.cshtml",
-              "RelativeToolTip": "RelaxingKoala\\Views\\Menu\\EditMenu.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAswBYAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-11T06:35:21.74Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AssignMenu.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\AssignMenu.cshtml",
               "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Menu\\AssignMenu.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\AssignMenu.cshtml",
               "RelativeToolTip": "RelaxingKoala\\Views\\Menu\\AssignMenu.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T05:49:02.775Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Index.cshtml",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Menu\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Index.cshtml",
-              "RelativeToolTip": "RelaxingKoala\\Views\\Menu\\Index.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAEEAAAB+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-10T18:31:10.031Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -125,53 +71,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Delete.cshtml",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Menu\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Delete.cshtml",
-              "RelativeToolTip": "RelaxingKoala\\Views\\Menu\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Index.cshtml",
+              "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Menu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Menu\\Index.cshtml",
+              "RelativeToolTip": "RelaxingKoala\\Views\\Menu\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-11T07:49:36.267Z",
+              "WhenOpened": "2024-11-11T09:30:24.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "RelaxingKoala\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "RelaxingKoala\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAsAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-11T06:23:59.74Z",
+              "WhenOpened": "2024-11-11T09:26:32.199Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "RelaxingKoala\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwC4AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T05:45:33.415Z",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\MenuItem\\Delete.cshtml",
+              "RelativeDocumentMoniker": "RelaxingKoala\\Views\\MenuItem\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Views\\MenuItem\\Delete.cshtml",
+              "RelativeToolTip": "RelaxingKoala\\Views\\MenuItem\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T09:25:39.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Program.cs",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Program.cs",
-              "RelativeToolTip": "RelaxingKoala\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAaAAAA",
+              "DocumentIndex": 3,
+              "Title": "MenuItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Controllers\\MenuItemController.cs",
+              "RelativeDocumentMoniker": "RelaxingKoala\\Controllers\\MenuItemController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\current peak\\RelaxingKoala\\Controllers\\MenuItemController.cs",
+              "RelativeToolTip": "RelaxingKoala\\Controllers\\MenuItemController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T05:50:22.727Z"
+              "WhenOpened": "2024-11-11T08:44:36.156Z",
+              "EditorCaption": ""
             }
           ]
         }
