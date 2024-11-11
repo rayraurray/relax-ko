@@ -1,13 +1,13 @@
-﻿@model List<Menu>  
+﻿@model List<Kitchen>
 @{
-	ViewBag.Title = "Menus";
+    ViewBag.Title = "Kitchens";
 }
 
-@* THIS IS MENU *@
+@* THIS IS KITCHEN *@
 
-<a asp-action="AssignMenu" class="btn btn-primary">Add New Menu</a>
+<a asp-action="AddKitchen" class="btn btn-primary">Add New Kitchen Order</a>
 
-<h1>List of Menus</h1>
+<h1>List of Kitchen Processes</h1>
 
 <form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
     <div>
@@ -39,8 +39,8 @@
             'change', 
             function () 
             {
-                var formElement = document.getElementById('menuItemForm');
-                formElement.submit();
+            var formElement = document.getElementById('menuItemForm');
+            formElement.submit();
             }
         )
     </script>
@@ -48,26 +48,28 @@
 </form>
 
 <table class="table table-striped">
-	<thead>
-		<th>Name</th>
-		<th>Description</th>
-		<th>Menu Items</th>
-        <th>Delete</th>
-	</thead>
+    <thead>
+    <th>Menu Item</th>
+    <th>Order Time</th>
+    <th>Is Prepared</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
 
-	<tbody>
-		@foreach (var menu in Model)
-		{
-			<tr>
-				<td>@menu.Name</td>
-				<td>@menu.Description</td>
-				<td>
-					<a asp-action="EditMenu" asp-controller="Menu" asp-route-menuItemId="@menu.MenuId" class="btn btn-info">Edit Menu Items</a>
-				</td>
+    <tbody>
+        @foreach (var kitchen in Model)
+        {
+            <tr>
+                <td>@kitchen.MenuItem.Name</td>
+                <td>@kitchen.OrderTime</td>
+                <td>@(kitchen.IsPrepared ? "Done" : "Not Done")</td>
                 <td>
-                    <a asp-action="Delete" asp-controller="Menu" asp-route-menuItemId="@menu.MenuId" class="btn btn-danger">Delete</a>
+                    <a asp-action="EditKitchen" asp-controller="Kitchen" asp-route-kitchenId="@kitchen.KitchenId" class="btn btn-info">Edit Kitchen Status</a>
                 </td>
-			</tr>
-		}
-	</tbody>
+                <td>
+                    <a asp-action="Delete" asp-controller="Kitchen" asp-route-kitchenId="@kitchen.KitchenId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

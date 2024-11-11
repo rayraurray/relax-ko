@@ -1,0 +1,11 @@
+﻿@model Kitchen
+@{
+	ViewBag.Title = "Delete Kitchen";
+}
+
+<h1>Are you sure you want to Delete this Kitchen Order</h1>
+
+<form asp-action="Delete" method="post">
+	<input type="hidden" name="kitchenId" asp-for="@Model.KitchenId" />
+	<button type="submit" class="btn btn-danger">Delete Kitchen Order</button>
+</form>
