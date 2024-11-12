@@ -84,7 +84,7 @@ namespace RelaxingKoala.Controllers
         }
             
         [HttpPost]
-        public async Task<IActionResult> ModifyState(Kitchen k, bool assignedValue)
+        public async Task<IActionResult> ModifyState(Kitchen k, bool assignedValue, string assignedMenuItem, DateTime orderTime)
         {
             Kitchen kitchen = await _context.Kitchens.Where(ki => ki.KitchenId == k.KitchenId).Include(ki => ki.MenuItem).FirstOrDefaultAsync();
 
@@ -92,6 +92,20 @@ namespace RelaxingKoala.Controllers
             {
                 kitchen.IsPrepared = assignedValue;
             }
+
+            if (assignedMenuItem != null)
+            {
+                MenuItem i = _context.MenuItems.Find(int.Parse(assignedMenuItem));
+
+                if (i != null)
+                {
+                    kitchen.MenuItemId = int.Parse(assignedMenuItem);
+                    kitchen.MenuItem = i;
+                }
+            }
+
+            kitchen.OrderTime = orderTime;
+
 
             await _context.SaveChangesAsync();
 

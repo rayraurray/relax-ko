@@ -10,24 +10,24 @@
 
 <h1>List of Payments</h1>
 
-@* MAKE FUNCTION `ChangeCustomer` here *@
-<form asp-action="ChangeCustomer" method="post" id="customerForm">
+@* MAKE FUNCTION `ChangeOrder` here *@
+<form asp-action="ChangeOrder" method="post" id="orderForm">
     <div>
-        <label class="form-label">Filter by Customer</label>
+        <label class="form-label">Filter by Order ID</label>
 
-        <select class="form-control" id="customerSelect" name="customerId">
+        <select class="form-control" id="orderSelect" name="orderId">
 
-            <option value="">Select Customer</option>
+            <option value="">Select Order ID</option>
 
-            @foreach (Customer customer in ViewBag.Customers)
+            @foreach (Order order in ViewBag.Orders)
             {
-                if (ViewBag.SelectedCustomers != null && ViewBag.SelectedCustomers == customer.CustomerId)
+                if (ViewBag.SelectedOrders != null && ViewBag.SelectedOrders == order.OrderId)
                 {
-                    <option value="@customer.CustomerId" selected>@customer.Name</option>
+                    <option value="@order.OrderId" selected>Order #@order.OrderId</option>
                 }
                 else
                 {
-                    <option value="@customer.CustomerId">@customer.Name</option>
+                    <option value="@order.OrderId">Order #@order.OrderId</option>
                 }
             }
 
@@ -35,12 +35,12 @@
     </div>
 
     <script>
-        var selectElement = document.getElementById('customerSelect');
+        var selectElement = document.getElementById('orderSelect');
         //Add event listener for change event
         selectElement.addEventListener(
             'change',
             function () {
-                var formElement = document.getElementById('customerForm');
+                var formElement = document.getElementById('orderForm');
                 formElement.submit();
             }
         )

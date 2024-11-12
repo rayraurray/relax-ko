@@ -7,17 +7,20 @@
 <h1>Edit Order #@Model.OrderId</h1>
 
 <form asp-action="ModifyOrder">
+
     @* Payment *@
     <label style="font-weight: bold; font-size: 1.5rem;">Payment</label>
     @foreach (var payment in ViewBag.Payments as List<Payment>)
     {
         <div class="form-check">
-            @{bool isChecked = Model.PaymentId == payment.PaymentId;}
+            @{
+                bool isChecked = Model.PaymentId == payment.PaymentId;
+            }
 
             <input type="radio" class="form-check-input" id="@payment.PaymentId" name="assignedPayment" value="@payment.PaymentId"
             @(isChecked ? "checked" : "") />
 
-            <label class="form-check-label" for="@payment.PaymentId">Payment #@payment.PaymentId - @payment.PaymentTime.ToString("g") - $@payment.Amount</label>
+            <label class="form-check-label" for="@payment.PaymentId">Payment #@payment.PaymentId</label>
         </div>
     }
 
@@ -26,9 +29,11 @@
     @foreach (var delivery in ViewBag.Deliveries as List<Delivery>)
     {
         <div class="form-check">
-            @{bool isChecked = Model.DeliveryId == delivery.DeliveryId;}
+            @{
+                bool isChecked = Model.DeliveryId == delivery.DeliveryId;
+            }
 
-            <input type="radio" class="form-check-input" id="@delivery.DeliveryId" name="assignedmPayment" value="@delivery.DeliveryId"
+            <input type="radio" class="form-check-input" id="@delivery.DeliveryId" name="assignedDelivery" value="@delivery.DeliveryId"
             @(isChecked ? "checked" : "") />
 
             <label class="form-check-label" for="@delivery.DeliveryId">Delivery #@delivery.DeliveryId</label>

@@ -164,9 +164,8 @@ namespace RelaxingKoala.Controllers
             return View(order);
         }
 
-        /*CHECK BECAUSE ITS A BIT BUGGY BROTHER*/
         [HttpPost]
-        public async Task<IActionResult> ModifyOrder(Order o, string assignedPayment, string assignedDelivery, string[] assignedMenuItems, string[] assignedCustomers)
+        public async Task<IActionResult> ModifyOrder(Order o, string[] assignedMenuItems, string[] assignedCustomers, string assignedPayment, string assignedDelivery)
         {
             Order order = await _context.Orders.Where(or => or.OrderId == o.OrderId)
                                       .Include(or => or.Payment)
@@ -181,11 +180,9 @@ namespace RelaxingKoala.Controllers
             if (assignedPayment != null)
             {
                 Payment p = _context.Payments.Find(int.Parse(assignedPayment));
-                
                 if (p != null)
                 {
                     order.PaymentId = int.Parse(assignedPayment);
-                    
                     order.Payment = p;
                 }
             }
@@ -193,11 +190,9 @@ namespace RelaxingKoala.Controllers
             if (assignedDelivery != null)
             {
                 Delivery d = _context.Deliveries.Find(int.Parse(assignedDelivery));
-                
                 if (d != null)
                 {
                     order.DeliveryId = int.Parse(assignedDelivery);
-
                     order.Delivery = d;
                 }
             }

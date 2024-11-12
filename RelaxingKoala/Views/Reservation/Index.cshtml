@@ -19,7 +19,7 @@
 
             <option value="">Select Customer</option>
 
-            @foreach (Customer customer in ViewBag.Customers)
+            @foreach (Customer customer in ViewBag.Customers as List<Customer>)
             {
                 if (ViewBag.SelectedCustomers != null && ViewBag.SelectedCustomers == customer.CustomerId)
                 {
@@ -62,19 +62,24 @@
         {
             <tr>
                 <td>@reservation.ReservationTime</td>
+
                 @* Implement methods *@
                 <td>@reservation.Customer.Name</td>
+
                 <td>
                     <a asp-action="ViewTables" asp-controller="Reservation" asp-route-reservationId="@reservation.ReservationId" class="btn btn-info">View Table(s)</a>
                 </td>
+
                 @* Implement EditReservation method *@
                 <td>
                     <a asp-action="EditReservation" asp-controller="Reservation" asp-route-reservationId="@reservation.ReservationId" class="btn btn-info">Edit Reservation</a>
                 </td>
+
                 @* Implement Delete method *@
                 <td>
                     <a asp-action="Delete" asp-controller="Reservation" asp-route-reservationId="@reservation.ReservationId" class="btn btn-danger">Delete</a>
                 </td>
+
             </tr>
         }
     </tbody>

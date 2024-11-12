@@ -1,0 +1,27 @@
+﻿@model RestaurantTable
+<h1>Add New Table</h1>
+
+<form asp-action="AddRestaurantTable" method="post">
+
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Table Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Reservations</label>
+
+        @foreach (var reservation in ViewBag.Reservations as List<Reservation>)
+        {
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="@reservation.ReservationId" name="assignedReservations" value="@reservation.ReservationId" />
+                <label class="form-check-label" for="@reservation.ReservationId">Reservation #@reservation.ReservationId</label>
+            </div>
+        }
+    </div>
+
+    <input type="hidden" asp-for="RestaurantTableId" />
+
+    <button type="submit" class="btn btn-primary">Add Menu</button>
+
+</form>

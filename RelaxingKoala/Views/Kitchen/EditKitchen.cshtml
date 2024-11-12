@@ -7,6 +7,11 @@
 
 <form asp-action="ModifyState">
 
+    @* Delivery Time *@
+    <label for="orderTime" style="font-weight: bold; font-size: 1.5rem;">Order Time</label>
+    <input type="datetime-local" id="orderTime" name="orderTime" class="form-control" value="@Model.OrderTime.ToString("yyyy-MM-ddTHH:mm:ss")" />
+
+    <label for="assignedValue" style="font-weight: bold; font-size: 1.5rem;">State</label>
 	<div class="form-check">
 		@{
 			bool isChecked = Model.IsPrepared;
@@ -24,6 +29,23 @@
 
         <label class="form-check-label">Not Prepared</label>
     </div>
+
+    @* Menu Items *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Menu Items</label>
+    @foreach (var menuItem in ViewBag.MenuItems as List<MenuItem>)
+    {
+        <div class="form-check">
+            @{
+                bool isCheckedMenuItem = Model.MenuItem.MenuItemId == menuItem.MenuItemId;
+            }
+
+            <input type="radio" class="form-check-input" id="@menuItem.MenuItemId" name="assignedMenuItem" value="@menuItem.MenuItemId"
+            @(isCheckedMenuItem ? "checked" : "") />
+
+            <label class="form-check-label" for="@menuItem.MenuItemId">@menuItem.Name</label>
+        </div>
+    }
+
 
 	<input type="hidden" name="kitchenId" value="@Model.KitchenId" />
 

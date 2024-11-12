@@ -1,0 +1,46 @@
+﻿@model Reservation
+
+@{
+    ViewBag.Title = "Edit Reservation";
+}
+
+<h1>Edit Reservation #@Model.ReservationId</h1>
+
+<form asp-action="ModifyReservation">
+    @* Customer *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Customer</label>
+    @foreach (var customer in ViewBag.Customers as List<Customer>)
+    {
+        <div class="form-check">
+            @{
+                bool isChecked = Model.CustomerId == customer.CustomerId;
+            }
+
+            <input type="radio" class="form-check-input" id="@customer.CustomerId" name="assignedCustomer" value="@customer.CustomerId"
+            @(isChecked ? "checked" : "") />
+
+            <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
+        </div>
+    }
+
+    @* Tables *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Tables</label>
+    @foreach (var table in ViewBag.RestaurantTables as List<RestaurantTable>)
+    {
+        <div class="form-check">
+            @{
+                bool isChecked = Model.Tables.Any(r => r.RestaurantTableId == table.RestaurantTableId);
+            }
+
+            <input type="checkbox" class="form-check-input" id="@table.RestaurantTableId" name="assignedTables" value="@table.RestaurantTableId"
+            @(isChecked ? "checked" : "") />
+
+            <label class="form-check-label" for="@table.RestaurantTableId">@table.Name</label>
+        </div>
+    }
+
+    <input type="hidden" name="ReservationId" value="@Model.ReservationId" />
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+

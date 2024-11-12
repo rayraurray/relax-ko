@@ -3,7 +3,7 @@
 	ViewBag.Title = "Delete Kitchen";
 }
 
-<h1>Are you sure you want to Delete this Kitchen Order</h1>
+<h1>Are you sure you want to Delete Kitchen Order @Model.KitchenId</h1>
 
 <form asp-action="Delete" method="post">
 	<input type="hidden" name="kitchenId" asp-for="@Model.KitchenId" />

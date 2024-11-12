@@ -1,0 +1,32 @@
+﻿@model RestaurantTable
+@{
+	ViewBag.Title = "Edit Table";
+}
+
+<h1>Edit Table Details for @Model.Name</h1>
+
+<form asp-action="ModifyRestaurantTable">
+
+	<div>
+		<label for="Name" style="font-weight: bold; font-size: 1.5rem;">Table Name</label>
+		<input class="form-control" name="tableName" placeholder="@Model.Name" />
+	</div>
+
+	<label style="font-weight: bold; font-size: 1.5rem;">Reservation</label>
+	@foreach (var reservation in ViewBag.Reservations as List<Reservation>)
+	{
+		<div class="form-check">
+			@{
+				bool isChecked = Model.Reservations.Any(i => i.ReservationId == reservation.ReservationId);
+			}
+
+			<input type="checkbox" class="form-check-input" id="@reservation.ReservationId" name="assignedReservations" value="@reservation.ReservationId"
+			@(isChecked ? "checked" : "") />
+
+			<label class="form-check-label" for="@reservation.ReservationId"> Reservation #@reservation.ReservationId</label>
+		</div>
+	}
+	<input type="hidden" name="restaurantTableId" value="@Model.RestaurantTableId" />
+
+	<button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

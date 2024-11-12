@@ -1,0 +1,33 @@
+﻿@model Delivery
+<h1>Add New Delivery</h1>
+
+<form asp-action="AddDelivery" method="post">
+
+    <label style="font-weight: bold; font-size: 1.5rem;">Delivery ID</label>
+    <input type="text" id="deliveryId" name="deliveryId" class="form-control" />
+
+    @* Delivery Time *@
+    <label for="deliveryTime" style="font-weight: bold; font-size: 1.5rem;">Delivery Time</label>
+    <input type="datetime-local" id="deliveryTime" name="deliveryTime" class="form-control" />
+
+    @* Delivery Address *@
+    <label for="deliveryAddress" style="font-weight: bold; font-size: 1.5rem;">Delivery Address</label>
+    <input type="text" id="deliveryAddress" name="deliveryAddress" class="form-control" />
+
+    @* Contact Number *@
+    <label for="contactNumber" style="font-weight: bold; font-size: 1.5rem;">Contact Number</label>
+    <input type="text" id="contactNumber" name="contactNumber" class="form-control" />
+
+    @* Order *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Order</label>
+    @foreach (var order in ViewBag.Orders as List<Order>)
+    {
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="@order.OrderId" name="assignedOrder" value="@order.OrderId" />
+            <label class="form-check-label" for="@order.OrderId">Order #@order.OrderId</label>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Add Delivery</button>
+
+</form>

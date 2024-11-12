@@ -1,0 +1,11 @@
+﻿@model Payment
+@{
+	ViewBag.Title = "Delete Payment";
+}
+
+<h1>Are you sure you want to Delete Payment #@Model.PaymentId</h1>
+
+<form asp-action="Delete" method="post">
+	<input type="hidden" name="paymentId" asp-for="@Model.PaymentId" />
+	<button type="submit" class="btn btn-danger">Delete Payment</button>
+</form>
