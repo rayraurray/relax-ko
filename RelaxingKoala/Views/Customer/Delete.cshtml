@@ -1,0 +1,11 @@
+﻿@model Customer
+@{
+	ViewBag.Title = "Delete Customer";
+}
+
+<h1>Are you sure you want to Delete Customer #@Model.Name</h1>
+
+<form asp-action="Delete" method="post">
+	<input type="hidden" name="customerId" asp-for="@Model.CustomerId" />
+	<button type="submit" class="btn btn-danger">Delete Customer</button>
+</form>

@@ -49,6 +49,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Menu Item</th>
     <th>Order Time</th>
     <th>State</th>
@@ -60,6 +61,7 @@
         @foreach (var kitchen in Model)
         {
             <tr>
+                <td>@kitchen.KitchenId</td>
                 <td>@kitchen.MenuItem.Name</td>
                 <td>@kitchen.OrderTime</td>
                 <td>@(kitchen.IsPrepared ? "Done" : "Not Done")</td>

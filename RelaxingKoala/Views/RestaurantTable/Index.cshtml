@@ -12,6 +12,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Name</th>
     <th>Reservation(s)</th>
     <th>Edit</th>
@@ -22,6 +23,7 @@
         @foreach (var table in Model)
         {
             <tr>
+                <td>@table.RestaurantTableId</td>
                 <td>@table.Name</td>
                 @* Implement below methods *@
                 <td>

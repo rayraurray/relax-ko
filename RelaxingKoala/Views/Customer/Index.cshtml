@@ -10,46 +10,9 @@
 
 <h1>List of Customers</h1>
 
-@* MAKE FUNCTION `ChangeOrder` here *@
-<form asp-action="ChangeOrder" method="post" id="orderForm">
-    <div>
-        <label class="form-label">Filter by Order ID</label>
-
-        <select class="form-control" id="orderSelect" name="customerId">
-
-            <option value="">Select Order ID</option>
-
-            @foreach (Order order in ViewBag.Orders)
-            {
-                if (ViewBag.SelectedOrders != null && ViewBag.SelectedOrders == order.OrderId)
-                {
-                    <option value="@order.OrderId" selected>@order.OrderId</option>
-                }
-                else
-                {
-                    <option value="@order.OrderId">@order.OrderId</option>
-                }
-            }
-
-        </select>
-    </div>
-
-    <script>
-        var selectElement = document.getElementById('orderSelect');
-        //Add event listener for change event
-        selectElement.addEventListener(
-            'change',
-            function () {
-                var formElement = document.getElementById('orderForm');
-                formElement.submit();
-            }
-        )
-    </script>
-
-</form>
-
 <table class="table table-striped">
     <thead>
+     <th>ID</th>
     <th>Name</th>
     <th>Contact Info</th>
     <th>Order(s)</th>
@@ -63,11 +26,12 @@
         @foreach (var customer in Model)
         {
             <tr>
+                <td>@customer.CustomerId</td>
                 <td>@customer.Name</td>
                 <td>@customer.ContactInfo</td>
                 @* Implement below methods *@
                 <td>
-                    <a asp-action="ViewOrders" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Reservation(s)</a>
+                    <a asp-action="ViewOrders" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Order(s)</a>
                 </td>
                 <td>
                     <a asp-action="ViewReservations" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Reservation(s)</a>
@@ -76,7 +40,7 @@
                     <a asp-action="ViewPayments" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Payment(s)</a>
                 </td>
                 <td>
-                    <a asp-action="EditCustomer" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">Edit Menu Items</a>
+                    <a asp-action="EditCustomer" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">Edit Customer</a>
                 </td>
                 <td>
                     <a asp-action="Delete" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-danger">Delete</a>

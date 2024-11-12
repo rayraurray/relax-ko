@@ -50,6 +50,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Payment Time</th>
     <th>Order</th>
     <th>Customer(s)</th>
@@ -64,7 +65,7 @@
         @foreach (var payment in Model)
         {
             <tr>
-                @* SO MANY METHODS TO IMPLEMENT *@
+                <td>@payment.PaymentId</td>
                 <td>@payment.PaymentTime</td>
                 <td>
                     <a asp-action="ViewOrder" asp-controller="Payment" asp-route-orderId="@payment.OrderId" class="btn btn-info">View Order</a>

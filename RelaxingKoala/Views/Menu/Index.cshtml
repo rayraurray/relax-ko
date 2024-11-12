@@ -49,6 +49,7 @@
 
 <table class="table table-striped">
 	<thead>
+        <th>ID</th>
 		<th>Name</th>
 		<th>Description</th>
 		<th>Menu Items</th>
@@ -59,6 +60,7 @@
 		@foreach (var menu in Model)
 		{
 			<tr>
+                <td>@menu.MenuId</td>
 				<td>@menu.Name</td>
 				<td>@menu.Description</td>
 				<td>

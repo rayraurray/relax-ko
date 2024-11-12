@@ -47,6 +47,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Name</th>
     <th>Description</th>
     <th>Price</th>
@@ -58,14 +59,15 @@
         @foreach (var menuItem in Model)
         {
             <tr>
+                <td>@menuItem.MenuItemId</td>
                 <td>@menuItem.Name</td>
                 <td>@menuItem.Description</td>
                 <td>@menuItem.Price</td>
                 <td>
-                    <a asp-action="EditMenuItem" asp-controller="MenuItem" asp-route-menuId="@menuItem.MenuItemId" class="btn btn-info">Edit Menu Items</a>
+                    <a asp-action="EditMenuItem" asp-controller="MenuItem" asp-route-menuItemId="@menuItem.MenuItemId" class="btn btn-info">Edit Menu Items</a>
                 </td>
                 <td>
-                    <a asp-action="Delete" asp-controller="MenuItem" asp-route-menuId="@menuItem.MenuItemId" class="btn btn-danger">Delete</a>
+                    <a asp-action="Delete" asp-controller="MenuItem" asp-route-menuItemId="@menuItem.MenuItemId" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }

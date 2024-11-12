@@ -1,0 +1,79 @@
+﻿@model Customer
+
+@{
+    ViewBag.Title = "Edit Customer";
+}
+
+<h1>Edit Customer #@Model.Name</h1>
+
+<form asp-action="ModifyCustomer">
+
+    @* Name *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Customer Name</label>
+    <input type="text" id="name" name="name" class="form-control" value="@Model.Name"/>
+
+    @* Contact Info *@
+    <label style="font-weight: bold; font-size: 1.5rem;">Contact Information</label>
+    <input type="text" id="contactInfo" name="contactInfo" class="form-control" value="@Model.ContactInfo" />
+
+    @* Orders *@
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Orders</label>
+        @foreach (var order in ViewBag.Orders as List<Order>)
+        {
+            <div class="form-check">
+                @{
+                    bool isChecked = Model.Orders.Any(o => o.OrderId == order.OrderId);
+                }
+
+                <input type="checkbox" class="form-check-input" id="@order.OrderId" name="assignedOrders" value="@order.OrderId"
+                @(isChecked ? "checked" : "") />
+
+                <label class="form-check-label" for="@order.OrderId">Order #@order.OrderId</label>
+            </div>
+        }
+    </div>
+
+    @* Reservations *@
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Reservations</label>
+
+        @foreach (var reservation in ViewBag.Reservations as List<Reservation>)
+        {
+            <div class="form-check">
+                @{
+                    bool isChecked = Model.Reservations.Any(r => r.ReservationId == reservation.ReservationId);
+                }
+
+                <input type="checkbox" class="form-check-input" id="@reservation.ReservationId" name="assignedReservations" value="@reservation.ReservationId"
+                @(isChecked ? "checked" : "") />
+
+                <label class="form-check-label" for="@reservation.ReservationId">Reservation #@reservation.ReservationId</label>
+            </div>
+        }
+    </div>
+
+    @* Payments *@
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Payments</label>
+
+        @foreach (var payment in ViewBag.Payments as List<Payment>)
+        {
+            <div class="form-check">
+                @{
+                    bool isChecked = Model.Payments.Any(p => p.PaymentId == payment.PaymentId);
+                }
+
+                <input type="checkbox" class="form-check-input" id="@payment.PaymentId" name="assignedPayments" value="@payment.PaymentId"
+                @(isChecked ? "checked" : "") />
+
+                <label class="form-check-label" for="@payment.PaymentId">Payment #@payment.PaymentId</label>
+            </div>
+        }
+    </div>
+
+    <input type="hidden" name="CustomerId" value="@Model.CustomerId" />
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+

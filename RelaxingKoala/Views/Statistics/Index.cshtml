@@ -48,6 +48,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Menu Item</th>
     <th>Number Of Orders</th>
     <th>AverageOrderTime</th>
@@ -60,6 +61,7 @@
         @foreach (var stat in Model)
         {
             <tr>
+                <td>@stat.StatisticsId</td>
                 <td>@stat.MenuItem.Name</td>
                 <td>@stat.NumberOfOrders</td>
                 <td>@stat.AverageOrderTime</td>

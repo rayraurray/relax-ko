@@ -50,6 +50,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>ID</th>
     <th>Delivery Time</th>
     <th>Delivery Address</th>
     <th>Contact Number</th>
@@ -62,6 +63,7 @@
         @foreach (var delivery in Model)
         {
             <tr>
+                <td>@delivery.DeliveryId</td>
                 <td>@delivery.DeliveryTime</td>
                 <td>@delivery.DeliveryAddress</td>
                 <td>@delivery.ContactNumber</td>

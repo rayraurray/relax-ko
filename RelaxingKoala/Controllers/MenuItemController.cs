@@ -79,6 +79,7 @@ namespace RelaxingKoala.Controllers
             var menuItem = await _context.MenuItems.Include(i => i.Menus).FirstOrDefaultAsync(i => i.MenuItemId == menuItemId);
 
             ViewBag.MenuItems = await _context.MenuItems.ToListAsync();
+            ViewBag.Menus = await _context.Menus.ToListAsync();
 
             return View(menuItem);
         }

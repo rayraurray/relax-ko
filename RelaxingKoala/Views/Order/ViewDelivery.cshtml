@@ -1,4 +1,4 @@
-﻿@model List<Delivery>
+﻿@model Delivery
 @{
     ViewBag.Title = "Delivery Details";
 }
@@ -7,6 +7,7 @@
 
 <table class="table table-striped">
     <thead>
+    <th>Delivery ID</th>
     <th>Delivery Time</th>
     <th>Delivery Address</th>
     <th>Contact Number</th>
@@ -14,16 +15,14 @@
     </thead>
 
     <tbody>
-        @foreach (var delivery in Model)
-        {
-            <tr>
-                <td>@delivery.DeliveryTime</td>
-                <td>@delivery.DeliveryAddress</td>
-                <td>@delivery.ContactNumber</td>
-                <td>
-                    <a asp-action="ViewOrder" asp-controller="Delivery" asp-route-customerId="@delivery.OrderId" class="btn btn-info">View Order</a>
-                </td>
-            </tr>
-        }
+        <tr>
+            <td>@Model.DeliveryId</td>
+            <td>@Model.DeliveryTime</td>
+            <td>@Model.DeliveryAddress</td>
+            <td>@Model.ContactNumber</td>
+            <td>
+                <a asp-action="ViewOrder" asp-controller="Delivery" asp-route-customerId="@Model.OrderId" class="btn btn-info">View Order</a>
+            </td>
+        </tr>
     </tbody>
 </table>
