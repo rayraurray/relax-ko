@@ -1,0 +1,80 @@
+﻿@model List<Delivery>
+@{
+    ViewBag.Title = "Deliveries";
+}
+
+@* THIS IS DELIVERY *@
+
+@* MAKE FUNCTION `AddDelivery` here *@
+<a asp-action="AddDelivery" class="btn btn-primary">Add New Delivery</a>
+
+<h1>List of Deliveries</h1>
+
+@* MAKE FUNCTION `ChangeOrder` here *@
+<form asp-action="ChangeOrder" method="post" id="orderForm">
+    <div>
+        <label class="form-label">Filter by Order ID</label>
+
+        <select class="form-control" id="orderSelect" name="customerId">
+
+            <option value="">Select Order ID</option>
+
+            @foreach (Order order in ViewBag.Orders)
+            {
+                if (ViewBag.SelectedOrders != null && ViewBag.SelectedOrders == order.OrderId)
+                {
+                    <option value="@order.OrderId" selected>@order.OrderId</option>
+                }
+                else
+                {
+                    <option value="@order.OrderId">@order.OrderId</option>
+                }
+            }
+
+        </select>
+    </div>
+
+    <script>
+        var selectElement = document.getElementById('orderSelect');
+        //Add event listener for change event
+        selectElement.addEventListener(
+            'change',
+            function () {
+                var formElement = document.getElementById('orderForm');
+                formElement.submit();
+            }
+        )
+    </script>
+
+</form>
+
+<table class="table table-striped">
+    <thead>
+    <th>Delivery Time</th>
+    <th>Delivery Address</th>
+    <th>Contact Number</th>
+    <th>Order</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+
+    <tbody>
+        @foreach (var delivery in Model)
+        {
+            <tr>
+                <td>@delivery.DeliveryTime</td>
+                <td>@delivery.DeliveryAddress</td>
+                <td>@delivery.ContactNumber</td>
+                <td>
+                    <a asp-action="ViewOrder" asp-controller="Delivery" asp-route-customerId="@delivery.OrderId" class="btn btn-info">View Order</a>
+                </td>
+                <td>
+                    <a asp-action="EditDelivery" asp-controller="Delivery" asp-route-deliveryId="@delivery.DeliveryId" class="btn btn-info">Edit Delivery</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="Delivery" asp-route-deliveryId="@delivery.DeliveryId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

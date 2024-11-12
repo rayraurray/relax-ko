@@ -1,0 +1,100 @@
+﻿@model List<Payment>
+@{
+    ViewBag.Title = "Payment";
+}
+
+@* THIS IS PAYMENT *@
+
+@* MAKE FUNCTION `AddPayment` here *@
+<a asp-action="AddPayment" class="btn btn-primary">Add New Payment</a>
+
+<h1>List of Payments</h1>
+
+@* MAKE FUNCTION `ChangeCustomer` here *@
+<form asp-action="ChangeCustomer" method="post" id="customerForm">
+    <div>
+        <label class="form-label">Filter by Customer</label>
+
+        <select class="form-control" id="customerSelect" name="customerId">
+
+            <option value="">Select Customer</option>
+
+            @foreach (Customer customer in ViewBag.Customers)
+            {
+                if (ViewBag.SelectedCustomers != null && ViewBag.SelectedCustomers == customer.CustomerId)
+                {
+                    <option value="@customer.CustomerId" selected>@customer.Name</option>
+                }
+                else
+                {
+                    <option value="@customer.CustomerId">@customer.Name</option>
+                }
+            }
+
+        </select>
+    </div>
+
+    <script>
+        var selectElement = document.getElementById('customerSelect');
+        //Add event listener for change event
+        selectElement.addEventListener(
+            'change',
+            function () {
+                var formElement = document.getElementById('customerForm');
+                formElement.submit();
+            }
+        )
+    </script>
+
+</form>
+
+<table class="table table-striped">
+    <thead>
+    <th>Payment Time</th>
+    <th>Order</th>
+    <th>Customer(s)</th>
+    <th>Type</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+
+    <tbody>
+        @foreach (var payment in Model)
+        {
+            <tr>
+                @* SO MANY METHODS TO IMPLEMENT *@
+                <td>@payment.PaymentTime</td>
+                <td>
+                    <a asp-action="ViewOrder" asp-controller="Payment" asp-route-orderId="@payment.OrderId" class="btn btn-info">View Order</a>
+                </td>
+                <td>
+                    <a asp-action="ViewCustomers" asp-controller="Payment" asp-route-paymentId="@payment.PaymentId" class="btn btn-info">View Customer(s)</a>
+                </td>
+                <td>
+                    @if (payment.PaymentType == 1)
+                    {
+                        @:Cash
+                    }
+                    else if (payment.PaymentType == 2)
+                    {
+                        @:Card
+                    }
+                    else
+                    {
+                        @:Unknown
+                    }
+                </td>
+                <td>@payment.Amount</td>
+                <td>@(payment.PaymentStatus ? "Completed" : "Incompleted")</td>
+                <td>
+                    <a asp-action="EditPayment" asp-controller="Payment" asp-route-paymentId="@payment.PaymentId" class="btn btn-info">Edit Payment</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="Payment" asp-route-paymentId="@payment.PaymentId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

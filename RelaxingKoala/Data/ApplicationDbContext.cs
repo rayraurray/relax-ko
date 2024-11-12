@@ -16,6 +16,12 @@ namespace RelaxingKoala.Data
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Kitchen> Kitchens { get; set; }
 		public DbSet<Statistics> Statistics { get; set; }
+		public DbSet<Customer> Customers { get; set; }
+		public DbSet<Order> Orders { get; set; }
+		public DbSet<Payment> Payments { get; set; }
+		public DbSet<RestaurantTable> RestaurantTables { get; set; }
+		public DbSet<Reservation> Reservations { get; set; }
+		public DbSet<Delivery> Deliveries { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -50,7 +56,8 @@ namespace RelaxingKoala.Data
                 mi6
             );
 
-            builder.Entity<Menu>().HasMany(m => m.Items).WithMany(i => i.Menus).UsingEntity(mi => mi.HasData(
+			// Many-to-Many: Menu <-> MenuItem
+			builder.Entity<Menu>().HasMany(m => m.Items).WithMany(i => i.Menus).UsingEntity(mi => mi.HasData(
                 new { MenusMenuId = 1, ItemsMenuItemId = 1 },
                 new { MenusMenuId = 1, ItemsMenuItemId = 2 },
                 new { MenusMenuId = 2, ItemsMenuItemId = 3 },
@@ -90,6 +97,87 @@ namespace RelaxingKoala.Data
 				stat5,
 				stat6
 			);
+
+			var c1 = new Customer { CustomerId = 1, Name = "John Doe", ContactInfo = "john@example.com" };
+			var c2 = new Customer { CustomerId = 2, Name = "Jane Smith", ContactInfo = "jane@example.com" };
+			var c3 = new Customer { CustomerId = 3, Name = "Alice Johnson", ContactInfo = "alice@example.com" };
+
+			builder.Entity<Customer>().HasData(
+                c1, 
+                c2, 
+                c3
+            );
+
+			var d1 = new Delivery { DeliveryId = 1, OrderId = 1, DeliveryAddress = "123 Main St", DeliveryTime = DateTime.Now.AddHours(1), ContactNumber = "123-456-7890" };
+
+			builder.Entity<Delivery>().HasData(
+                d1
+            );
+
+			var o1 = new Order { OrderId = 1, OrderTime = DateTime.Now.AddHours(-4), PaymentId = 1, DeliveryId = 1 };
+			var o2 = new Order { OrderId = 2, OrderTime = DateTime.Now.AddHours(-2), PaymentId = 2 };
+			
+            builder.Entity<Order>().HasData(
+                o1, 
+                o2
+            );
+
+			var p1 = new Payment { PaymentId = 1, PaymentTime = DateTime.Now.AddHours(-3), OrderId = 1, PaymentType = 1, Amount = 450.00f, PaymentStatus = true };
+			var p2 = new Payment { PaymentId = 2, PaymentTime = DateTime.Now.AddHours(-1), OrderId = 2, PaymentType = 2, Amount = 300.00f, PaymentStatus = false };
+			
+            builder.Entity<Payment>().HasData(
+                p1,
+                p2
+            );
+
+			var r1 = new Reservation { ReservationId = 1, CustomerId = 1, ReservationTime = DateTime.Now.AddDays(1) };
+			var r2 = new Reservation { ReservationId = 2, CustomerId = 2, ReservationTime = DateTime.Now.AddDays(2) };
+
+			builder.Entity<Reservation>().HasData(
+                r1, 
+                r2
+            );
+
+			var t1 = new RestaurantTable { RestaurantTableId = 1, Name = "Table A" };
+			var t2 = new RestaurantTable { RestaurantTableId = 2, Name = "Table B" };
+
+			builder.Entity<RestaurantTable>().HasData(
+                t1, 
+                t2
+            );
+
+			// Many-to-Many: Customer <-> Payments
+			builder.Entity<Customer>().HasMany(c => c.Payments).WithMany(p => p.Customers).UsingEntity(cp => cp.HasData(
+				new { CustomersCustomerId = 1, PaymentsPaymentId = 1},
+				new { CustomersCustomerId = 2, PaymentsPaymentId = 2}
+			));
+
+            // Many-to-Many: Reservation <-> Tables
+            builder.Entity<Reservation>().HasMany(r => r.Tables).WithMany(t => t.Reservations).UsingEntity(tr  => tr.HasData(
+				new { ReservationsReservationId = 1, TablesRestaurantTableId = 1 },
+				new { ReservationsReservationId = 2, TablesRestaurantTableId = 2 }
+            ));
+
+			// Many-to-Many: Order <-> MenuItems
+            builder.Entity<Order>().HasMany(o => o.MenuItems).WithMany(i => i.Orders).UsingEntity(oi => oi.HasData(
+				new { OrdersOrderId = 1, MenuItemsMenuItemId = 1 },
+				new { OrdersOrderId = 1, MenuItemsMenuItemId = 2 },
+				new { OrdersOrderId = 2, MenuItemsMenuItemId = 3 },
+				new { OrdersOrderId = 2, MenuItemsMenuItemId = 4 }
+            ));
+
+            // Many-to-Many: Customer <-> Order
+            builder.Entity<Customer>().HasMany(u => u.Orders).WithMany(d => d.Customers).UsingEntity(du => du.HasData(
+                new { OrdersOrderId = 1, CustomersCustomerId = 1 },
+                new { OrdersOrderId = 2, CustomersCustomerId = 2 },
+                new { OrdersOrderId = 1, CustomersCustomerId = 3 }
+            ));
+
+			// One-to-One: Order -> Delivery
+			builder.Entity<Order>().HasOne(o => o.Delivery).WithOne(d => d.Order).HasForeignKey<Delivery>(d => d.OrderId).OnDelete(DeleteBehavior.Cascade);
+
+			// One-to-One: Order -> Payment
+			builder.Entity<Order>().HasOne(o => o.Payment).WithOne(p => p.Order).HasForeignKey<Payment>(p => p.OrderId).OnDelete(DeleteBehavior.Cascade);
 		}
-    }
+	}
 }

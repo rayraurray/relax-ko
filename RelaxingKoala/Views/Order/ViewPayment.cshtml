@@ -1,0 +1,41 @@
+﻿@model Payment
+
+@{
+    ViewBag.Title = "Payment Details";
+}
+
+<h1>Payment Details</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Time</th>
+            <th>Order ID</th>
+            <th>Payment Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>@Model.PaymentId</td>
+        <td>@Model.PaymentId</td>
+        <td>@Model.OrderId</td>
+        <td>
+            @if (@Model.PaymentType == 1)
+            {
+                @:Cash
+            }
+            else if (@Model.PaymentType == 2)
+            {
+                @:Card
+            }
+            else
+            {
+                @:Unknown
+            }
+        </td>
+        <td>@Model.Amount$</td>
+        <td>@(Model.PaymentStatus ? "Completed" : "Incompleted")</td>
+    </tbody>
+</table>

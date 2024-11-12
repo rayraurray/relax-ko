@@ -17,6 +17,102 @@ namespace RelaxingKoala.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
 
+            modelBuilder.Entity("CustomerOrder", b =>
+                {
+                    b.Property<int>("CustomersCustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OrdersOrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CustomersCustomerId", "OrdersOrderId");
+
+                    b.HasIndex("OrdersOrderId");
+
+                    b.ToTable("CustomerOrder");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomersCustomerId = 1,
+                            OrdersOrderId = 1
+                        },
+                        new
+                        {
+                            CustomersCustomerId = 2,
+                            OrdersOrderId = 2
+                        },
+                        new
+                        {
+                            CustomersCustomerId = 3,
+                            OrdersOrderId = 1
+                        });
+                });
+
+            modelBuilder.Entity("CustomerPayment", b =>
+                {
+                    b.Property<int>("CustomersCustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PaymentsPaymentId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CustomersCustomerId", "PaymentsPaymentId");
+
+                    b.HasIndex("PaymentsPaymentId");
+
+                    b.ToTable("CustomerPayment");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomersCustomerId = 1,
+                            PaymentsPaymentId = 1
+                        },
+                        new
+                        {
+                            CustomersCustomerId = 2,
+                            PaymentsPaymentId = 2
+                        });
+                });
+
+            modelBuilder.Entity("MenuItemOrder", b =>
+                {
+                    b.Property<int>("MenuItemsMenuItemId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OrdersOrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("MenuItemsMenuItemId", "OrdersOrderId");
+
+                    b.HasIndex("OrdersOrderId");
+
+                    b.ToTable("MenuItemOrder");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuItemsMenuItemId = 1,
+                            OrdersOrderId = 1
+                        },
+                        new
+                        {
+                            MenuItemsMenuItemId = 2,
+                            OrdersOrderId = 1
+                        },
+                        new
+                        {
+                            MenuItemsMenuItemId = 3,
+                            OrdersOrderId = 2
+                        },
+                        new
+                        {
+                            MenuItemsMenuItemId = 4,
+                            OrdersOrderId = 2
+                        });
+                });
+
             modelBuilder.Entity("MenuMenuItem", b =>
                 {
                     b.Property<int>("ItemsMenuItemId")
@@ -257,6 +353,83 @@ namespace RelaxingKoala.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("RelaxingKoala.Models.Customer", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ContactInfo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomerId = 1,
+                            ContactInfo = "john@example.com",
+                            Name = "John Doe"
+                        },
+                        new
+                        {
+                            CustomerId = 2,
+                            ContactInfo = "jane@example.com",
+                            Name = "Jane Smith"
+                        },
+                        new
+                        {
+                            CustomerId = 3,
+                            ContactInfo = "alice@example.com",
+                            Name = "Alice Johnson"
+                        });
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Delivery", b =>
+                {
+                    b.Property<int>("DeliveryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DeliveryAddress")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DeliveryTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("DeliveryId");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("Deliveries");
+
+                    b.HasData(
+                        new
+                        {
+                            DeliveryId = 1,
+                            ContactNumber = "123-456-7890",
+                            DeliveryAddress = "123 Main St",
+                            DeliveryTime = new DateTime(2024, 11, 12, 0, 50, 18, 770, DateTimeKind.Local).AddTicks(5916),
+                            OrderId = 1
+                        });
+                });
+
             modelBuilder.Entity("RelaxingKoala.Models.Kitchen", b =>
                 {
                     b.Property<int>("KitchenId")
@@ -284,42 +457,42 @@ namespace RelaxingKoala.Data.Migrations
                             KitchenId = 1,
                             IsPrepared = false,
                             MenuItemId = 1,
-                            OrderTime = new DateTime(2024, 11, 11, 19, 1, 37, 656, DateTimeKind.Local).AddTicks(6803)
+                            OrderTime = new DateTime(2024, 11, 11, 22, 50, 18, 770, DateTimeKind.Local).AddTicks(5790)
                         },
                         new
                         {
                             KitchenId = 2,
                             IsPrepared = false,
                             MenuItemId = 2,
-                            OrderTime = new DateTime(2024, 11, 11, 18, 1, 37, 656, DateTimeKind.Local).AddTicks(8011)
+                            OrderTime = new DateTime(2024, 11, 11, 21, 50, 18, 770, DateTimeKind.Local).AddTicks(5805)
                         },
                         new
                         {
                             KitchenId = 3,
                             IsPrepared = true,
                             MenuItemId = 3,
-                            OrderTime = new DateTime(2024, 11, 11, 17, 1, 37, 656, DateTimeKind.Local).AddTicks(8016)
+                            OrderTime = new DateTime(2024, 11, 11, 20, 50, 18, 770, DateTimeKind.Local).AddTicks(5806)
                         },
                         new
                         {
                             KitchenId = 4,
                             IsPrepared = true,
                             MenuItemId = 4,
-                            OrderTime = new DateTime(2024, 11, 11, 18, 31, 37, 656, DateTimeKind.Local).AddTicks(8018)
+                            OrderTime = new DateTime(2024, 11, 11, 22, 20, 18, 770, DateTimeKind.Local).AddTicks(5807)
                         },
                         new
                         {
                             KitchenId = 5,
                             IsPrepared = false,
                             MenuItemId = 5,
-                            OrderTime = new DateTime(2024, 11, 11, 19, 16, 37, 656, DateTimeKind.Local).AddTicks(8019)
+                            OrderTime = new DateTime(2024, 11, 11, 23, 5, 18, 770, DateTimeKind.Local).AddTicks(5808)
                         },
                         new
                         {
                             KitchenId = 6,
                             IsPrepared = true,
                             MenuItemId = 6,
-                            OrderTime = new DateTime(2024, 11, 11, 17, 31, 37, 656, DateTimeKind.Local).AddTicks(8020)
+                            OrderTime = new DateTime(2024, 11, 11, 21, 20, 18, 770, DateTimeKind.Local).AddTicks(5809)
                         });
                 });
 
@@ -428,6 +601,150 @@ namespace RelaxingKoala.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("RelaxingKoala.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("DeliveryId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("OrderTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("PaymentId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = 1,
+                            DeliveryId = 1,
+                            OrderTime = new DateTime(2024, 11, 11, 19, 50, 18, 770, DateTimeKind.Local).AddTicks(5933),
+                            PaymentId = 1
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            OrderTime = new DateTime(2024, 11, 11, 21, 50, 18, 770, DateTimeKind.Local).AddTicks(5935),
+                            PaymentId = 2
+                        });
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Payment", b =>
+                {
+                    b.Property<int>("PaymentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<float>("Amount")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("PaymentStatus")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("PaymentTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PaymentType")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("PaymentId");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("Payments");
+
+                    b.HasData(
+                        new
+                        {
+                            PaymentId = 1,
+                            Amount = 450f,
+                            OrderId = 1,
+                            PaymentStatus = true,
+                            PaymentTime = new DateTime(2024, 11, 11, 20, 50, 18, 770, DateTimeKind.Local).AddTicks(5951),
+                            PaymentType = 1
+                        },
+                        new
+                        {
+                            PaymentId = 2,
+                            Amount = 300f,
+                            OrderId = 2,
+                            PaymentStatus = false,
+                            PaymentTime = new DateTime(2024, 11, 11, 22, 50, 18, 770, DateTimeKind.Local).AddTicks(5953),
+                            PaymentType = 2
+                        });
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Reservation", b =>
+                {
+                    b.Property<int>("ReservationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("ReservationTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ReservationId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            ReservationId = 1,
+                            CustomerId = 1,
+                            ReservationTime = new DateTime(2024, 11, 12, 23, 50, 18, 770, DateTimeKind.Local).AddTicks(5968)
+                        },
+                        new
+                        {
+                            ReservationId = 2,
+                            CustomerId = 2,
+                            ReservationTime = new DateTime(2024, 11, 13, 23, 50, 18, 770, DateTimeKind.Local).AddTicks(5970)
+                        });
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.RestaurantTable", b =>
+                {
+                    b.Property<int>("RestaurantTableId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("RestaurantTableId");
+
+                    b.ToTable("RestaurantTables");
+
+                    b.HasData(
+                        new
+                        {
+                            RestaurantTableId = 1,
+                            Name = "Table A"
+                        },
+                        new
+                        {
+                            RestaurantTableId = 2,
+                            Name = "Table B"
+                        });
+                });
+
             modelBuilder.Entity("RelaxingKoala.Models.Statistics", b =>
                 {
                     b.Property<int>("StatisticsId")
@@ -503,6 +820,78 @@ namespace RelaxingKoala.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ReservationRestaurantTable", b =>
+                {
+                    b.Property<int>("ReservationsReservationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TablesRestaurantTableId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ReservationsReservationId", "TablesRestaurantTableId");
+
+                    b.HasIndex("TablesRestaurantTableId");
+
+                    b.ToTable("ReservationRestaurantTable");
+
+                    b.HasData(
+                        new
+                        {
+                            ReservationsReservationId = 1,
+                            TablesRestaurantTableId = 1
+                        },
+                        new
+                        {
+                            ReservationsReservationId = 2,
+                            TablesRestaurantTableId = 2
+                        });
+                });
+
+            modelBuilder.Entity("CustomerOrder", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Customer", null)
+                        .WithMany()
+                        .HasForeignKey("CustomersCustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelaxingKoala.Models.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrdersOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CustomerPayment", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Customer", null)
+                        .WithMany()
+                        .HasForeignKey("CustomersCustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelaxingKoala.Models.Payment", null)
+                        .WithMany()
+                        .HasForeignKey("PaymentsPaymentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MenuItemOrder", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.MenuItem", null)
+                        .WithMany()
+                        .HasForeignKey("MenuItemsMenuItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelaxingKoala.Models.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrdersOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MenuMenuItem", b =>
                 {
                     b.HasOne("RelaxingKoala.Models.MenuItem", null)
@@ -569,6 +958,17 @@ namespace RelaxingKoala.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("RelaxingKoala.Models.Delivery", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Order", "Order")
+                        .WithOne("Delivery")
+                        .HasForeignKey("RelaxingKoala.Models.Delivery", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("RelaxingKoala.Models.Kitchen", b =>
                 {
                     b.HasOne("RelaxingKoala.Models.MenuItem", "MenuItem")
@@ -580,6 +980,28 @@ namespace RelaxingKoala.Data.Migrations
                     b.Navigation("MenuItem");
                 });
 
+            modelBuilder.Entity("RelaxingKoala.Models.Payment", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Order", "Order")
+                        .WithOne("Payment")
+                        .HasForeignKey("RelaxingKoala.Models.Payment", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Reservation", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Customer", "Customer")
+                        .WithMany("Reservations")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("RelaxingKoala.Models.Statistics", b =>
                 {
                     b.HasOne("RelaxingKoala.Models.MenuItem", "MenuItem")
@@ -589,6 +1011,35 @@ namespace RelaxingKoala.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("MenuItem");
+                });
+
+            modelBuilder.Entity("ReservationRestaurantTable", b =>
+                {
+                    b.HasOne("RelaxingKoala.Models.Reservation", null)
+                        .WithMany()
+                        .HasForeignKey("ReservationsReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelaxingKoala.Models.RestaurantTable", null)
+                        .WithMany()
+                        .HasForeignKey("TablesRestaurantTableId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Customer", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("RelaxingKoala.Models.Order", b =>
+                {
+                    b.Navigation("Delivery")
+                        .IsRequired();
+
+                    b.Navigation("Payment")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

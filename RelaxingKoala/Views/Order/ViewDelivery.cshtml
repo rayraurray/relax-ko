@@ -1,0 +1,24 @@
+﻿@model Delivery
+
+@{
+    ViewBag.Title = "Delivery Details";
+}
+
+<h1>Payment Details</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Delivery Time</th>
+            <th>Delivery Address</th>
+            <th>Contact Number</th>
+            <th>Order ID</th>
+        </tr>
+    </thead>
+    <tbody>
+    <td>@Model.DeliveryTime</td>
+    <td>@Model.DeliveryAddress</td>
+    <td>@Model.ContactNumber</td>
+    <td>@Model.OrderId</td>
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿@model List<Order>
+@{
+    ViewBag.Title = "Orders";
+}
+
+@* THIS IS ORDER *@
+
+@* MAKE FUNCTION `AddOrder` here *@
+<a asp-action="AddOrder" class="btn btn-primary">Add New Order</a>
+
+<h1>List of Orders</h1>
+
+<table class="table table-striped">
+    <thead>
+    <th>Order Time</th>
+    <th>Payment</th>
+    <th>Delivery</th>
+    <th>Customer(s)</th>
+    <th>Menu Item(s)</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderTime</td>
+                @* Implement ViewDelivery and ViewPayment and ViewCustomers methods *@
+                <td>
+                    @if (order.PaymentId != null)
+                    {
+                        <a asp-action="ViewPayment" asp-controller="Order" asp-route-paymentId="@order.PaymentId" class="btn btn-info">View Payment #@order.PaymentId</a>
+                    }
+                    else
+                    {
+                        <span>No Payment Info</span>
+                    }
+                </td>
+                <td>
+                    @if (order.DeliveryId != null)
+                    {
+                        <a asp-action="ViewDelivery" asp-controller="Order" asp-route-deliveryId="@order.DeliveryId" class="btn btn-info">View Delivery #@order.DeliveryId</a>
+                    }
+                    else
+                    {
+                        <span>No Delivery Info</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="ViewCustomers" asp-controller="Order" asp-route-orderId="@order.OrderId" class="btn btn-info">View Customer(s)</a>
+                </td>
+                <td>
+                    <a asp-action="ViewMenuItems" asp-controller="Order" asp-route-orderId="@order.OrderId" class="btn btn-info">View MenuItem(s)</a>
+                </td>
+                @* Implement EditOrder method *@
+                <td>
+                    <a asp-action="EditOrder" asp-controller="Order" asp-route-orderId="@order.OrderId" class="btn btn-info">Edit Order</a>
+                </td>
+                @* Implement Delete method *@
+                <td>
+                    <a asp-action="Delete" asp-controller="Order" asp-route-orderId="@order.OrderId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

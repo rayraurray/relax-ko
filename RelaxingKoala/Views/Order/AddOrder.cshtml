@@ -1,0 +1,56 @@
+﻿@model Order
+<h1>Add New Order</h1>
+
+<form asp-action="AddOrder" method="post">
+
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Payments</label>
+        @foreach (var payment in ViewBag.Payments as List<Payment>)
+        {
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="@payment.PaymentId" name="assignedPayment" value="@payment.PaymentId" />
+                <label class="form-check-label" for="@payment.PaymentId">Payment #@payment.PaymentId</label>
+            </div>
+        }
+    </div>
+    
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Deliveries</label>
+        @foreach (var delivery in ViewBag.Deliveries as List<Delivery>)
+        {
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="@delivery.DeliveryId" name="assignedDelivery" value="@delivery.DeliveryId" />
+                <label class="form-check-label" for="@delivery.DeliveryId">Delivery #@delivery.DeliveryId</label>
+            </div>
+        }
+    </div>
+    
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Menu Items</label>
+        @foreach (var menuItem in ViewBag.MenuItems as List<MenuItem>)
+        {
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="@menuItem.MenuItemId" name="assignedMenuItems" value="@menuItem.MenuItemId" />
+                <label class="form-check-label" for="@menuItem.MenuItemId">@menuItem.Name</label>
+            </div>
+        }
+    </div>
+
+    <div>
+        <label style="font-weight: bold; font-size: 1.5rem;">Choose Customers</label>
+
+        @foreach (var customer in ViewBag.Customers as List<Customer>)
+        {
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="@customer.CustomerId" name="assignedCustomers" value="@customer.CustomerId" />
+                <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
+            </div>
+        }
+    </div>
+    
+
+	<input type="hidden" asp-for="OrderId" />
+
+	<button type="submit" class="btn btn-primary">Add Menu</button>
+
+</form>
