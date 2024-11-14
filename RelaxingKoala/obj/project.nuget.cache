@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iRuDj0CLOU6iD+RMj5St/XtslFjahcFaqJvxhI6r4ub1A5VPxQcVhSrZKoYu3Ar6ZNBeVaRjcNgNVVJ2CIWeOA==",
+  "dgSpecHash": "syDxweZ8Rjc0+P2+REnJL4KF1wePpJDYsTJPkSCZlARzK2VTqKA/XaiaX5WNsZxch/403lsjdVYQQydQaLOvIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\RelaxingKoala.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

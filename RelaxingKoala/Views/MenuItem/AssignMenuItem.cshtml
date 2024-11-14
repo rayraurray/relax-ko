@@ -1,34 +1,39 @@
 ﻿@model MenuItem
-<h1>Add New Menu Item</h1>
 
-<form asp-action="AssignMenuItem" method="post">
+<div class="menu-container">
+	<h1 class="edit-menu-text">Add New Menu Item</h1>
 
-	<div>
-		<label asp-for="Name">Menu Item Name</label>
-		<input asp-for="Name" class="form-control" />
-	</div>
+	<form asp-action="AssignMenuItem" method="post">
 
-	@foreach (var menu in ViewBag.Menus as List<Menu>)
-	{
-		<div class="form-check">
-			<input type="checkbox" class="form-check-input" id="@menu.MenuId" name="assignedMenus" value="@menu.MenuId" />
-			<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
+		<div>
+			<label asp-for="Name" class="menu-name-text">Menu Item Name</label>
+			<input asp-for="Name" class="form-control" />
 		</div>
-	}
 
-	<div>
-		<label asp-for="Description">Description</label>
-		<input asp-for="Description" class="form-control" />
-	</div>
+		<label style="font-weight: bold; font-size: 1.5rem;">Menus</label>
+		@foreach (var menu in ViewBag.Menus as List<Menu>)
+		{
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="@menu.MenuId" name="assignedMenus" value="@menu.MenuId" />
+				<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
+			</div>
+		}
 
-	<div>
-		<label asp-for="Price">Price</label>
-		<input asp-for="Price" class="form-control" />
-	</div>
+		<div>
+			<label asp-for="Description" class="menu-name-text">Description</label>
+			<input asp-for="Description" class="form-control" />
+		</div>
+
+		<div>
+			<label asp-for="Price" class="menu-name-text">Price</label>
+			<input asp-for="Price" class="form-control" />
+		</div>
 
 
-	<input type="hidden" asp-for="MenuItemId" />
+		<input type="hidden" asp-for="MenuItemId" />
 
-	<button type="submit" class="btn btn-primary">Add Menu Item</button>
+		<button type="submit" class="btn menu-add-btn">Add Menu Item</button>
 
-</form>
+	</form>
+
+</div>

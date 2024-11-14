@@ -4,72 +4,75 @@
 }
 
 @* THIS IS MENU *@
+<div class="menu-container">
 
-<a asp-action="AssignMenu" class="btn btn-primary">Add New Menu</a>
+    <h1 class="menu-text text-center">List of Menus</h1>
 
-<h1>List of Menus</h1>
+    <a asp-action="AssignMenu" class="btn btn-primary new-menu-btn">Add New Menu</a>
 
-<form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
-    <div>
-        <label class="form-label">Filter With Menu Item</label>
+    <form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
+        <div>
+            <label class="form-label">Filter With Menu Item</label>
 
-        <select class="form-control" id="menuItemSelect" name="menuItemId">
+            <select class="form-control" id="menuItemSelect" name="menuItemId">
 
-            <option value="">Select Menu Item</option>
+                <option value="">Select Menu Item</option>
 
-            @foreach (MenuItem menuItem in ViewBag.MenuItems)
-            {
-                if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                @foreach (MenuItem menuItem in ViewBag.MenuItems)
                 {
-                    <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                    if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                    {
+                        <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                    }
                 }
-                else
+
+            </select>
+        </div>
+
+        <script>
+            var selectElement = document.getElementById('menuItemSelect');
+            //Add event listener for change event
+            selectElement.addEventListener(
+                'change', 
+                function () 
                 {
-                    <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                    var formElement = document.getElementById('menuItemForm');
+                    formElement.submit();
                 }
-            }
+            )
+        </script>
 
-        </select>
-    </div>
+    </form>
 
-    <script>
-        var selectElement = document.getElementById('menuItemSelect');
-        //Add event listener for change event
-        selectElement.addEventListener(
-            'change', 
-            function () 
-            {
-                var formElement = document.getElementById('menuItemForm');
-                formElement.submit();
-            }
-        )
-    </script>
+    <table class="table table-striped">
+	    <thead>
+            <th>ID</th>
+		    <th>Name</th>
+		    <th>Description</th>
+		    <th>Edit</th>
+            <th>Delete</th>
+	    </thead>
 
-</form>
+	    <tbody>
+		    @foreach (var menu in Model)
+		    {
+			    <tr>
+                    <td>@menu.MenuId</td>
+				    <td>@menu.Name</td>
+				    <td>@menu.Description</td>
+				    <td>
+					    <a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu</a>
+				    </td>
+                    <td>
+                        <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
+                    </td>
+			    </tr>
+		    }
+	    </tbody>
+    </table>
 
-<table class="table table-striped">
-	<thead>
-        <th>ID</th>
-		<th>Name</th>
-		<th>Description</th>
-		<th>Menu Items</th>
-        <th>Delete</th>
-	</thead>
-
-	<tbody>
-		@foreach (var menu in Model)
-		{
-			<tr>
-                <td>@menu.MenuId</td>
-				<td>@menu.Name</td>
-				<td>@menu.Description</td>
-				<td>
-					<a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu Items</a>
-				</td>
-                <td>
-                    <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
-                </td>
-			</tr>
-		}
-	</tbody>
-</table>
+</div>
