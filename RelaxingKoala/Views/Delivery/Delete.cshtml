@@ -3,9 +3,12 @@
 	ViewBag.Title = "Delete Delivery";
 }
 
-<h1>Are you sure you want to Delete Delivery #@Model.DeliveryId</h1>
+<div class="add-container">
 
-<form asp-action="Delete" method="post">
-	<input type="hidden" name="deliveryId" asp-for="@Model.DeliveryId" />
-	<button type="submit" class="btn btn-danger">Delete Delivery</button>
-</form>
+	<h1 class="delete-text">Are you sure you want to delete Delivery #@Model.DeliveryId</h1>
+
+	<form asp-action="Delete" method="post">
+		<input type="hidden" name="deliveryId" asp-for="@Model.DeliveryId" />
+		<button type="submit" class="btn delete-menu-btn">Delete Delivery</button>
+	</form>
+</div>

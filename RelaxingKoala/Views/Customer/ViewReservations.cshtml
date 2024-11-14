@@ -4,24 +4,27 @@
     ViewBag.Title = "Reservation(s) Details";
 }
 
-<h1>Reservation(s) Details</h1>
+<div class="add-container">
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Reservation ID</th>
-            <th>Customer ID</th>
-            <th>Reservation Time</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var reservation in Model)
-        {
+    <h1 class="add-text">Reservation(s) Details</h1>
+
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>@reservation.ReservationId</td>
-                <td>@reservation.CustomerId</td>
-                <td>@reservation.ReservationTime</td>
+                <th>Reservation ID</th>
+                <th>Customer ID</th>
+                <th>Reservation Time</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model)
+            {
+                <tr>
+                    <td>@reservation.ReservationId</td>
+                    <td>@reservation.CustomerId</td>
+                    <td>@reservation.ReservationTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -4,43 +4,46 @@
     ViewBag.Title = "Payment(s) Details";
 }
 
-<h1>Payment(s) Details</h1>
+<div class="add-container">
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Payment ID</th>
-            <th>Time</th>
-            <th>Order ID</th>
-            <th>Payment Type</th>
-            <th>Amount</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var payment in Model)
-        {
+    <h1 class="add-text">Payment(s) Details</h1>
+
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>@payment.PaymentId</td>
-                <td>@payment.PaymentId</td>
-                <td>@payment.OrderId</td>
-                <td>
-                    @if (@payment.PaymentType == 1)
-                    {
-                        @:Cash
-                    }
-                    else if (@payment.PaymentType == 2)
-                    {
-                        @:Card
-                    }
-                    else
-                    {
-                        @:Unknown
-                    }
-                </td>
-                <td>@payment.Amount$</td>
-                <td>@(payment.PaymentStatus ? "Completed" : "Incompleted")</td>
+                <th>Payment ID</th>
+                <th>Time</th>
+                <th>Order ID</th>
+                <th>Payment Type</th>
+                <th>Amount</th>
+                <th>Status</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var payment in Model)
+            {
+                <tr>
+                    <td>@payment.PaymentId</td>
+                    <td>@payment.PaymentId</td>
+                    <td>@payment.OrderId</td>
+                    <td>
+                        @if (@payment.PaymentType == 1)
+                        {
+                            @:Cash
+                        }
+                        else if (@payment.PaymentType == 2)
+                        {
+                            @:Card
+                        }
+                        else
+                        {
+                            @:Unknown
+                        }
+                    </td>
+                    <td>@payment.Amount$</td>
+                    <td>@(payment.PaymentStatus ? "Completed" : "Incompleted")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

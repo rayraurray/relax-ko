@@ -3,10 +3,13 @@
 	ViewBag.Title = "Delete Table";
 }
 
-<h1>Are you sure you want to Delete @Model.Name</h1>
+<div class="add-container">
 
-<form asp-action="Delete" method="post">
-	<input type="hidden" name="restaurantTableId" asp-for="@Model.RestaurantTableId" />
+	<h1 class="delete-text">Are you sure you want to delete @Model.Name</h1>
+
+	<form asp-action="Delete" method="post">
+		<input type="hidden" name="restaurantTableId" asp-for="@Model.RestaurantTableId" />
 	
-	<button type="submit" class="btn btn-danger">Delete Table</button>
-</form>
+		<button type="submit" class="btn delete-menu-btn">Delete Table</button>
+	</form>
+</div>

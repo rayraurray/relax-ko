@@ -2,10 +2,12 @@
 @{
 	ViewBag.Title = "Delete Statistics";
 }
+<div class="add-container">
 
-<h1>Are you sure you want to Delete this Statistic</h1>
+	<h1 class="delete-text">Are you sure you want to delete this statistic?</h1>
 
-<form asp-action="Delete" method="post">
-	<input type="hidden" name="statisticsId" asp-for="@Model.StatisticsId" />
-	<button type="submit" class="btn btn-danger">Delete Statistic</button>
-</form>
+	<form asp-action="Delete" method="post">
+		<input type="hidden" name="statisticsId" asp-for="@Model.StatisticsId" />
+		<button type="submit" class="btn delete-menu-btn">Delete Statistic</button>
+	</form>
+</div>

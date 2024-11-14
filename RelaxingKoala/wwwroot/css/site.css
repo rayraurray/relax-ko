@@ -378,10 +378,11 @@ body {
     border: 2px solid #003B4A;
 }
 
-.new-menu-btn:hover {
-    background-color: #003B4A; /* Customize color for 'Order Online' button */
-    color: #fdf3e7;
-}
+    .new-menu-btn:hover {
+        background-color: #003B4A; /* Customize color for 'Order Online' button */
+        color: #fdf3e7;
+        border: 2px solid #003B4A;
+    }
 
 .form-label {
     font-size: 1rem;
@@ -414,13 +415,13 @@ body {
 .edit-menu-btn:hover {
     background-color: #003B4A; /* Customize color for 'Order Online' button */
     color: #fdf3e7;
-    border: none !important;
+    border: 2px solid #003B4A;
 }
 
 .delete-menu-btn:hover {
     background-color: #003B4A; /* Customize color for 'Order Online' button */
     color: #fdf3e7;
-    border:none !important;
+    border: 2px solid #003B4A;
 }
 
 /* edit menu */
@@ -452,7 +453,7 @@ body {
     .save-btn:hover {
         background-color: #003B4A !important; /* Customize color for 'Order Online' button */
         color: #fdf3e7;
-        border: none !important;
+        border: 2px solid #003B4A;
     }
 
 /* delete menu */
@@ -505,5 +506,5 @@ body {
     .menu-add-btn:hover {
         background-color: #003B4A !important; /* Customize color for 'Order Online' button */
         color: #fdf3e7;
-        border: none !important;
+        border: 2px solid #003B4A;
     }

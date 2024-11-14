@@ -3,42 +3,44 @@
 @{
     ViewBag.Title = "Add Reservation";
 }
+<div class="add-container">
 
-<h1>Add New Reservation</h1>
+    <h1 class="add-text">Add New Reservation</h1>
 
-<form asp-action="AddReservation" method="post">
+    <form asp-action="AddReservation" method="post">
 
-    <div>
-        <label style="font-weight: bold; font-size: 1.5rem;">Choose Customer</label>
-        @foreach (var customer in ViewBag.Customers as List<Customer>)
-        {
-            <div class="form-check">
-                <input type="radio" class="form-check-input" id="@customer.CustomerId" name="assignedCustomer" value="@customer.CustomerId" />
-                <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
-            </div>
-        }
-    </div>
+        <div>
+            <label style="font-weight: bold; font-size: 1.5rem;">Choose Customer</label>
+            @foreach (var customer in ViewBag.Customers as List<Customer>)
+            {
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="@customer.CustomerId" name="assignedCustomer" value="@customer.CustomerId" />
+                    <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
+                </div>
+            }
+        </div>
 
-    <div>
-        <label style="font-weight: bold; font-size: 1.5rem;">Choose Tables</label>
+        <div>
+            <label style="font-weight: bold; font-size: 1.5rem;">Choose Tables</label>
 
-        @foreach (var table in ViewBag.RestaurantTables as List<RestaurantTable>)
-        {
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="@table.RestaurantTableId" name="assignedRestaurantTables" value="@table.RestaurantTableId" />
-                <label class="form-check-label" for="@table.RestaurantTableId">@table.Name</label>
-            </div>
-        }
-    </div>
+            @foreach (var table in ViewBag.RestaurantTables as List<RestaurantTable>)
+            {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="@table.RestaurantTableId" name="assignedRestaurantTables" value="@table.RestaurantTableId" />
+                    <label class="form-check-label" for="@table.RestaurantTableId">@table.Name</label>
+                </div>
+            }
+        </div>
 
-    <div>
-        <label style="font-weight: bold; font-size: 1.5rem;">Reservation Time</label>
-        <input asp-for="ReservationTime" type="datetime-local" class="form-control" />
-        <span asp-validation-for="ReservationTime" class="text-danger"></span>
-    </div>
+        <div>
+            <label style="font-weight: bold; font-size: 1.5rem;">Reservation Time</label>
+            <input asp-for="ReservationTime" type="datetime-local" class="form-control" />
+            <span asp-validation-for="ReservationTime" class="text-danger"></span>
+        </div>
 
-    <input type="hidden" asp-for="ReservationId" />
+        <input type="hidden" asp-for="ReservationId" />
 
-    <button type="submit" class="btn btn-primary">Add Menu</button>
+        <button type="submit" class="btn save-btn">Add Menu</button>
 
-</form>
+    </form>
+</div>

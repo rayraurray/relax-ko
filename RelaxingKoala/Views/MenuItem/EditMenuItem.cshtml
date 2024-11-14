@@ -3,38 +3,41 @@
 	ViewBag.Title = "Edit Menu Item";
 }
 
-<h1>Edit Menu Item Details for @Model.Name</h1>
+<div class="edit-menu-cont">
 
-<form asp-action="ModifyMenuItem">
+	<h1 class="edit-menu-text">Edit Menu Item Details for @Model.Name</h1>
 
-	@* Name *@
-	<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Name</label>
-	<input type="text" id="name" name="name" class="form-control" value="@Model.Name" />
+	<form asp-action="ModifyMenuItem">
 
-	@* Description *@
-	<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Description</label>
-	<input type="text" id="description" name="description" class="form-control" value="@Model.Description" />
+		@* Name *@
+		<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Name</label>
+		<input type="text" id="name" name="name" class="form-control" value="@Model.Name" />
 
-	@* Price *@
-	<label for="amount" style="font-weight: bold; font-size: 1.5rem;">Price</label>
-	<input type="number" id="price" name="price" class="form-control" step="0.01" value="@Model.Price" />
+		@* Description *@
+		<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Description</label>
+		<input type="text" id="description" name="description" class="form-control" value="@Model.Description" />
 
-	<label style="font-weight: bold; font-size: 1.5rem;">Menus</label>
-	@foreach (var menu in ViewBag.Menus)
-	{
-		<div class="form-check">
-			@{
-				bool isChecked = Model.Menus.Any(m => m.MenuId == menu.MenuId);
-			}
+		@* Price *@
+		<label for="amount" style="font-weight: bold; font-size: 1.5rem;">Price</label>
+		<input type="number" id="price" name="price" class="form-control" step="0.01" value="@Model.Price" />
 
-			<input type="checkbox" class="form-check-input" id="@menu.MenuId" name="assignedMenus" value="@menu.MenuId"
-			@(isChecked ? "checked" : "") />
+		<label style="font-weight: bold; font-size: 1.5rem;">Menus</label>
+		@foreach (var menu in ViewBag.Menus)
+		{
+			<div class="form-check">
+				@{
+					bool isChecked = Model.Menus.Any(m => m.MenuId == menu.MenuId);
+				}
 
-			<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
-		</div>
-	}
+				<input type="checkbox" class="form-check-input" id="@menu.MenuId" name="assignedMenus" value="@menu.MenuId"
+				@(isChecked ? "checked" : "") />
 
-	<input type="hidden" name="menuItemId" value="@Model.MenuItemId" />
+				<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
+			</div>
+		}
 
-	<button type="submit" class="btn btn-primary">Save Changes</button>
-</form>
+		<input type="hidden" name="menuItemId" value="@Model.MenuItemId" />
+
+		<button type="submit" class="btn save-btn">Save Changes</button>
+	</form>
+</div>

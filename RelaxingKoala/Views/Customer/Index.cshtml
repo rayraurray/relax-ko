@@ -6,46 +6,50 @@
 @* THIS IS CUSTOMER *@
 
 @* MAKE FUNCTION `AddCustomer` here *@
-<a asp-action="AddCustomer" class="btn btn-primary">Add New Customers</a>
 
-<h1>List of Customers</h1>
+<div class="add-container">
 
-<table class="table table-striped">
-    <thead>
-     <th>ID</th>
-    <th>Name</th>
-    <th>Contact Info</th>
-    <th>Order(s)</th>
-    <th>Reservation(s)</th>
-    <th>Payment(s)</th>
-    <th>Edit</th>
-    <th>Delete</th>
-    </thead>
+    <h1 class="add-text">List of Customers</h1>
 
-    <tbody>
-        @foreach (var customer in Model)
-        {
-            <tr>
-                <td>@customer.CustomerId</td>
-                <td>@customer.Name</td>
-                <td>@customer.ContactInfo</td>
-                @* Implement below methods *@
-                <td>
-                    <a asp-action="ViewOrders" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Order(s)</a>
-                </td>
-                <td>
-                    <a asp-action="ViewReservations" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Reservation(s)</a>
-                </td>
-                <td>
-                    <a asp-action="ViewPayments" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">View Payment(s)</a>
-                </td>
-                <td>
-                    <a asp-action="EditCustomer" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-info">Edit Customer</a>
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <a asp-action="AddCustomer" class="btn menu-add-btn">Add New Customers</a>
+
+    <table class="table table-striped">
+        <thead>
+         <th>ID</th>
+        <th>Name</th>
+        <th>Contact Info</th>
+        <th>Order(s)</th>
+        <th>Reservation(s)</th>
+        <th>Payment(s)</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        </thead>
+
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.CustomerId</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.ContactInfo</td>
+                    @* Implement below methods *@
+                    <td>
+                        <a asp-action="ViewOrders" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn edit-menu-btn">View Order(s)</a>
+                    </td>
+                    <td>
+                        <a asp-action="ViewReservations" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn edit-menu-btn">View Reservation(s)</a>
+                    </td>
+                    <td>
+                        <a asp-action="ViewPayments" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn edit-menu-btn">View Payment(s)</a>
+                    </td>
+                    <td>
+                        <a asp-action="EditCustomer" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn edit-menu-btn">Edit Customer</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-controller="Customer" asp-route-customerId="@customer.CustomerId" class="btn edit-menu-btn">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

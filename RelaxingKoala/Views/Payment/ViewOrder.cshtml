@@ -4,38 +4,41 @@
     ViewBag.Title = "Order Details";
 }
 
-<h1>Order Details</h1>
+<div class="add-container"> 
 
-<table class="table table-bordered">
-    <thead>
-    <th>Order ID</th>
-    <th>Order Time</th>
-    <th>Delivery ID</th>
-    <th>Customer(s)</th>
-    <th>Menu Item(s)</th>
-    </thead>
+    <h1 class="add-text">Order Details</h1>
 
-    <tbody>
-        <tr>
-            <td>@Model.OrderId</td>
-            <td>@Model.OrderTime</td>
-            <td>
-                @if (@Model.DeliveryId != null)
-                {
-                    <a asp-action="ViewDelivery" asp-controller="Order" asp-route-deliveryId="@Model.DeliveryId" class="btn btn-info">View Delivery #@Model.DeliveryId</a>
-                }
-                else
-                {
-                    <span>No Delivery Info</span>
-                }
-            </td>
-            <td>
-                <a asp-action="ViewCustomers" asp-controller="Order" asp-route-orderId="@Model.OrderId" class="btn btn-info">View Customer(s)</a>
-            </td>
-            <td>
-                <a asp-action="ViewMenuItems" asp-controller="Order" asp-route-orderId="@Model.OrderId" class="btn btn-info">View MenuItem(s)</a>
-            </td>
-        </tr>
+    <table class="table table-bordered">
+        <thead>
+        <th>Order ID</th>
+        <th>Order Time</th>
+        <th>Delivery ID</th>
+        <th>Customer(s)</th>
+        <th>Menu Item(s)</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>@Model.OrderId</td>
+                <td>@Model.OrderTime</td>
+                <td>
+                    @if (@Model.DeliveryId != null)
+                    {
+                        <a asp-action="ViewDelivery" asp-controller="Order" asp-route-deliveryId="@Model.DeliveryId" class="btn edit-menu-btn">View Delivery #@Model.DeliveryId</a>
+                    }
+                    else
+                    {
+                        <span>No Delivery Info</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="ViewCustomers" asp-controller="Order" asp-route-orderId="@Model.OrderId" class="btn edit-menu-btn">View Customer(s)</a>
+                </td>
+                <td>
+                    <a asp-action="ViewMenuItems" asp-controller="Order" asp-route-orderId="@Model.OrderId" class="btn edit-menu-btn">View MenuItem(s)</a>
+                </td>
+            </tr>
         
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>

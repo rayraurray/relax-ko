@@ -3,26 +3,29 @@
     ViewBag.Title = "Delivery Details";
 }
 
-<h1>Delivery Details</h1>
+<div class="add-container">
 
-<table class="table table-striped">
-    <thead>
-    <th>Delivery ID</th>
-    <th>Delivery Time</th>
-    <th>Delivery Address</th>
-    <th>Contact Number</th>
-    <th>Order</th>
-    </thead>
+    <h1 class="add-text">Delivery Details</h1>
 
-    <tbody>
-        <tr>
-            <td>@Model.DeliveryId</td>
-            <td>@Model.DeliveryTime</td>
-            <td>@Model.DeliveryAddress</td>
-            <td>@Model.ContactNumber</td>
-            <td>
-                <a asp-action="ViewOrder" asp-controller="Delivery" asp-route-customerId="@Model.OrderId" class="btn btn-info">View Order</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <table class="table table-striped">
+        <thead>
+        <th>Delivery ID</th>
+        <th>Delivery Time</th>
+        <th>Delivery Address</th>
+        <th>Contact Number</th>
+        <th>Order</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>@Model.DeliveryId</td>
+                <td>@Model.DeliveryTime</td>
+                <td>@Model.DeliveryAddress</td>
+                <td>@Model.ContactNumber</td>
+                <td>
+                    <a asp-action="ViewOrder" asp-controller="Delivery" asp-route-customerId="@Model.OrderId" class="btn edit-menu-btn">View Order</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

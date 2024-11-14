@@ -4,25 +4,28 @@
     ViewBag.Title = "Table(s) Details";
 }
 
-<h1>Table(s) Details</h1>
+<div class="add-container">
 
-<table class="table table-bordered">
+    <h1 class="add-text">Table(s) Details</h1>
 
-    <thead>
-        <tr>
-            <th>Restaurant Table ID</th>
-            <th>Name</th>
-        </tr>
-    </thead>
+    <table class="table table-bordered">
 
-    <tbody>
-        @foreach (var table in Model)
-        {
+        <thead>
             <tr>
-                <td>@table.RestaurantTableId</td>
-                <td>@table.Name</td>
+                <th>Restaurant Table ID</th>
+                <th>Name</th>
             </tr>
-        }
-    </tbody>
+        </thead>
 
-</table>
+        <tbody>
+            @foreach (var table in Model)
+            {
+                <tr>
+                    <td>@table.RestaurantTableId</td>
+                    <td>@table.Name</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

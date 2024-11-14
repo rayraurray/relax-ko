@@ -5,74 +5,77 @@
 
 @* THIS IS STATISTICS *@
 
-<a asp-action="AddStatistics" class="btn btn-primary">Add New Statistics</a>
+<div class="add-container">
 
-<h1>List of Statistics</h1>
+    <h1 class="add-text">List of Statistics</h1>
 
-<form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
-    <div>
-        <label class="form-label">Filter With Menu Item</label>
+    <a asp-action="AddStatistics" class="btn menu-add-btn">Add New Statistics</a>
 
-        <select class="form-control" id="menuItemSelect" name="menuItemId">
+    <form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
+        <div>
+            <label class="form-label">Filter With Menu Item</label>
 
-            <option value="">Select Menu Item</option>
+            <select class="form-control" id="menuItemSelect" name="menuItemId">
 
-            @foreach (MenuItem menuItem in ViewBag.MenuItems)
+                <option value="">Select Menu Item</option>
+
+                @foreach (MenuItem menuItem in ViewBag.MenuItems)
+                {
+                    if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                    {
+                        <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                    }
+                }
+
+            </select>
+        </div>
+
+        <script>
+            var selectElement = document.getElementById('menuItemSelect');
+            //Add event listener for change event
+            selectElement.addEventListener(
+                'change',
+                function () {
+                    var formElement = document.getElementById('menuItemForm');
+                    formElement.submit();
+                }
+            )
+        </script>
+
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+        <th>ID</th>
+        <th>Menu Item</th>
+        <th>Number Of Orders</th>
+        <th>AverageOrderTime</th>
+        <th>Recorded Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        </thead>
+
+        <tbody>
+            @foreach (var stat in Model)
             {
-                if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
-                {
-                    <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
-                }
-                else
-                {
-                    <option value="@menuItem.MenuItemId">@menuItem.Name</option>
-                }
+                <tr>
+                    <td>@stat.StatisticsId</td>
+                    <td>@stat.MenuItem.Name</td>
+                    <td>@stat.NumberOfOrders</td>
+                    <td>@stat.AverageOrderTime</td>
+                    <td>@stat.RecordedDate</td>
+                    <td>
+                        <a asp-action="EditStatistics" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn edit-menu-btn">Edit Statistics</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn delete-menu-btn">Delete</a>
+                    </td>
+                </tr>
             }
-
-        </select>
-    </div>
-
-    <script>
-        var selectElement = document.getElementById('menuItemSelect');
-        //Add event listener for change event
-        selectElement.addEventListener(
-            'change',
-            function () {
-                var formElement = document.getElementById('menuItemForm');
-                formElement.submit();
-            }
-        )
-    </script>
-
-</form>
-
-<table class="table table-striped">
-    <thead>
-    <th>ID</th>
-    <th>Menu Item</th>
-    <th>Number Of Orders</th>
-    <th>AverageOrderTime</th>
-    <th>Recorded Date</th>
-    <th>Edit</th>
-    <th>Delete</th>
-    </thead>
-
-    <tbody>
-        @foreach (var stat in Model)
-        {
-            <tr>
-                <td>@stat.StatisticsId</td>
-                <td>@stat.MenuItem.Name</td>
-                <td>@stat.NumberOfOrders</td>
-                <td>@stat.AverageOrderTime</td>
-                <td>@stat.RecordedDate</td>
-                <td>
-                    <a asp-action="EditStatistics" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn btn-info">Edit Statistics</a>
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>

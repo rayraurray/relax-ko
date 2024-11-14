@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\RelaxingKoala.csproj": {}
+    "C:\\SB\\SWE30003\\Asm3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\RelaxingKoala.csproj": {
+    "C:\\SB\\SWE30003\\Asm3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\RelaxingKoala.csproj",
+        "projectUniqueName": "C:\\SB\\SWE30003\\Asm3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj",
         "projectName": "RelaxingKoala",
-        "projectPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\RelaxingKoala.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko-nanh\\RelaxingKoala\\obj\\",
+        "projectPath": "C:\\SB\\SWE30003\\Asm3\\relax-ko\\RelaxingKoala\\RelaxingKoala.csproj",
+        "packagesPath": "C:\\Users\\Ngoc Anh\\.nuget\\packages\\",
+        "outputPath": "C:\\SB\\SWE30003\\Asm3\\relax-ko\\RelaxingKoala\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ngoc Anh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -95,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

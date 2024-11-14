@@ -4,26 +4,30 @@
     ViewBag.Title = "Menu Items Details";
 }
 
-<h1>Menu Items Details</h1>
+<div class="add-container">
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Menu Item ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var menuItem in Model)
-        {
+    <h1 class="add-text">Menu Items Details</h1>
+
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>@menuItem.MenuItemId</td>
-                <td>@menuItem.Name</td>
-                <td>@menuItem.Price</td>
-                <td>@menuItem.Description</td>
+                <th>Menu Item ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var menuItem in Model)
+            {
+                <tr>
+                    <td>@menuItem.MenuItemId</td>
+                    <td>@menuItem.Name</td>
+                    <td>@menuItem.Price</td>
+                    <td>@menuItem.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

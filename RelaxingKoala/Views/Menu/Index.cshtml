@@ -65,10 +65,10 @@
 				    <td>@menu.Name</td>
 				    <td>@menu.Description</td>
 				    <td>
-					    <a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu</a>
+					    <a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn edit-menu-btn">Edit Menu</a>
 				    </td>
                     <td>
-                        <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
+                        <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn delete-menu-btn">Delete</a>
                     </td>
 			    </tr>
 		    }

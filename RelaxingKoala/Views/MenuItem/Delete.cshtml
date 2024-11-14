@@ -2,10 +2,11 @@
 @{
 	ViewBag.Title = "Delete Menu Item";
 }
+<div class="delete-container">
+	<h1 class="delete-text">Are you sure you want to Delete @Model.Name?</h1>
 
-<h1>Are you sure you want to Delete @Model.Name</h1>
-
-<form asp-action="Delete" method="post">
-	<input type="hidden" name="menuItemId" asp-for="@Model.MenuItemId" />
-	<button type="submit" class="btn btn-danger">Delete Menu Item</button>
-</form>
+	<form asp-action="Delete" method="post">
+		<input type="hidden" name="menuItemId" asp-for="@Model.MenuItemId" />
+		<button type="submit" class="btn delete-menu-btn">Delete Menu Item</button>
+	</form>
+</div>

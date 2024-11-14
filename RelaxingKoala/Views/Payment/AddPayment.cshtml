@@ -1,64 +1,67 @@
 ﻿@model Payment
-<h1>Add New Payment</h1>
+<div class="add-container">
 
-<form asp-action="AddPayment" method="post">
+    <h1 class="add-text">Add New Payment</h1>
 
-    <label style="font-weight: bold; font-size: 1.5rem;">Payment ID</label>
-    <input type="text" id="paymentId" name="paymentId" class="form-control" />
+    <form asp-action="AddPayment" method="post">
 
-    @* Payment Time *@
-    <label for="paymentTime" style="font-weight: bold; font-size: 1.5rem;">Payment Time</label>
-    <input type="datetime-local" id="paymentTime" name="paymentTime" class="form-control" value="" />
+        <label style="font-weight: bold; font-size: 1.5rem;">Payment ID</label>
+        <input type="text" id="paymentId" name="paymentId" class="form-control" />
 
-    @* Payment Type *@
-    <label for="paymentType" style="font-weight: bold; font-size: 1.5rem;">Payment Type</label>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="creditCard" name="paymentType" value="1" />
-        <label class="form-check-label" for="creditCard">Credit Card</label>
-    </div>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="cash" name="paymentType" value="2" />
-        <label class="form-check-label" for="cash">Cash</label>
-    </div>
+        @* Payment Time *@
+        <label for="paymentTime" style="font-weight: bold; font-size: 1.5rem;">Payment Time</label>
+        <input type="datetime-local" id="paymentTime" name="paymentTime" class="form-control" value="" />
 
-    @* Amount *@
-    <label for="amount" style="font-weight: bold; font-size: 1.5rem;">Amount</label>
-    <input type="number" id="amount" name="amount" class="form-control" step="0.01" value="" />
-
-    @* Payment Status *@
-    <label for="paymentStatus" style="font-weight: bold; font-size: 1.5rem;">Payment Status</label>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="completed" name="paymentStatus" value="true"/>
-        <label class="form-check-label" for="completed">Completed</label>
-    </div>
-
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="pending" name="paymentStatus" value="false"/>
-        <label class="form-check-label" for="pending">Pending</label>
-    </div>
-
-    @* Order *@
-    <label style="font-weight: bold; font-size: 1.5rem;">Payment</label>
-    @foreach (var order in ViewBag.Orders as List<Order>)
-    {
+        @* Payment Type *@
+        <label for="paymentType" style="font-weight: bold; font-size: 1.5rem;">Payment Type</label>
         <div class="form-check">
-            <input type="radio" class="form-check-input" id="@order.OrderId" name="assignedOrder" value="@order.OrderId"/>
-
-            <label class="form-check-label" for="@order.OrderId">Order #@order.OrderId</label>
+            <input type="radio" class="form-check-input" id="creditCard" name="paymentType" value="1" />
+            <label class="form-check-label" for="creditCard">Credit Card</label>
         </div>
-    }
-
-    @* Customers *@
-    <label style="font-weight: bold; font-size: 1.5rem;">Customers</label>
-    @foreach (var customer in ViewBag.Customers as List<Customer>)
-    {
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="@customer.CustomerId" name="assignedCustomers" value="@customer.CustomerId"/>
-
-            <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
+            <input type="radio" class="form-check-input" id="cash" name="paymentType" value="2" />
+            <label class="form-check-label" for="cash">Cash</label>
         </div>
-    }
 
-    <button type="submit" class="btn btn-primary">Add Payment</button>
+        @* Amount *@
+        <label for="amount" style="font-weight: bold; font-size: 1.5rem;">Amount</label>
+        <input type="number" id="amount" name="amount" class="form-control" step="0.01" value="" />
 
-</form>
+        @* Payment Status *@
+        <label for="paymentStatus" style="font-weight: bold; font-size: 1.5rem;">Payment Status</label>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="completed" name="paymentStatus" value="true"/>
+            <label class="form-check-label" for="completed">Completed</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="pending" name="paymentStatus" value="false"/>
+            <label class="form-check-label" for="pending">Pending</label>
+        </div>
+
+        @* Order *@
+        <label style="font-weight: bold; font-size: 1.5rem;">Payment</label>
+        @foreach (var order in ViewBag.Orders as List<Order>)
+        {
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="@order.OrderId" name="assignedOrder" value="@order.OrderId"/>
+
+                <label class="form-check-label" for="@order.OrderId">Order #@order.OrderId</label>
+            </div>
+        }
+
+        @* Customers *@
+        <label style="font-weight: bold; font-size: 1.5rem;">Customers</label>
+        @foreach (var customer in ViewBag.Customers as List<Customer>)
+        {
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="@customer.CustomerId" name="assignedCustomers" value="@customer.CustomerId"/>
+
+                <label class="form-check-label" for="@customer.CustomerId">@customer.Name</label>
+            </div>
+        }
+
+        <button type="submit" class="btn save-btn">Add Payment</button>
+
+    </form>
+</div>

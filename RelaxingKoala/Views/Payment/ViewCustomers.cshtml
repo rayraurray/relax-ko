@@ -4,24 +4,27 @@
     ViewBag.Title = "Customers Details";
 }
 
-<h1>Customer Details</h1>
+<div class="add-container">
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Customer ID</th>
-            <th>Customer Name</th>
-            <th>Contact Info</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var customer in Model)
-        {
+    <h1 class="add-text">Customer Details</h1>
+
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>@customer.CustomerId</td>
-                <td>@customer.Name</td>
-                <td>@customer.ContactInfo</td>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Contact Info</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.CustomerId</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.ContactInfo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
