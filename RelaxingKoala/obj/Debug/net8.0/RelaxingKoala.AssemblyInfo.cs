@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98adf80984ed62b3c148fee98d57b21da6ae7683")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf30fd97344af68d2788262fa6250e91686b4149")]
 [assembly: System.Reflection.AssemblyProductAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RelaxingKoala")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
