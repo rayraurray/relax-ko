@@ -1,8 +1,153 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome TO KOALA LAND WHOOOOOOOOO</h1>
-    <img src="./img/mộc lil.png" alt="Welcome Image" class="img-fluid" />
+@*banner*@
+<div class="banner-container">
+    <img src="~/img/mộc lil.png" alt="Banner" class="banner-img" />
+    <div class="banner-overlay">
+         <img src="~/img/logo.png" alt="Logo" class="banner-logo" />
+        <p class="banner-name">Relaxing Koala, place to be lazy.</p>
+    </div>
 </div>
+
+@*introduction*@
+<section class="intro-section">
+    <h1 class="text-5xl font-semibold mb-4">UNWIND & INDULGE</h1>
+
+    <p class="text-lg italic mb-6">Welcome to Relaxing Koala,</p>
+
+    <p class="text-lg italic text-gray-600 mb-6 leading-tight">
+        where cozy vibes and comfort food invite you to unwind and savor life at a slower pace.
+    </p>
+
+    <p class="text-base text-gray-700 leading-tight mb-6">
+        Inspired by our spirit animal, the koala,
+    </p>
+
+    <p class="text-base text-gray-700 leading-tight mb-6">
+        we’ve crafted a space that’s all about taking it easy,
+    </p>
+
+    <p class="text-base text-gray-700 leading-tight mb-6">
+        with a menu designed to bring warmth and joy to your day.
+    </p>
+
+    <p class="text-base text-gray-700 leading-tight mb-6">
+        Whether you’re here for a hearty breakfast, an afternoon coffee, or a leisurely lunch,
+    </p>
+
+    <p class="text-xs italic text-gray-500 leading-tight">
+        you’ll find a perfect spot to relax, recharge, and enjoy.
+    </p>
+</section>
+
+@*moment*@
+<div class="moment-container">
+    <h1 class="text-center">MOMENTS AT RELAXING KOALA</h1>
+    <div class="bigger">
+    <!-- Swiper Carousel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="~/img/moc1.jpg" alt="Moment 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/img/moc2.jpg" alt="Moment 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/img/moc3.jpg" alt="Moment 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/img/moc4.jpg" alt="Moment 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/img/moc5.jpg" alt="Moment 3">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,                  // Enable looping
+            centeredSlides: true,         // Center the active slide
+            slidesPerView: 1.5,           // Increase to 1.5 to ensure partial preview of next slide
+            spaceBetween: 20,             // Space between slides (adjust as needed)
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,              // Change slide every 5 seconds
+                disableOnInteraction: false,
+            },
+        });
+    });
+</script>
+
+@*the journey*@
+<div class="journey-container">
+    <h1 class="text-center">THE JOURNEY OF TASTES</h1>
+    <p class="text-center">Embark on a Journey of Tastes at Relaxing Koala, where every dish is crafted to bring comfort and delight. </br>
+                            Our menu is a flavorful adventure inspired by global tastes yet rooted in cozy, familiar favorites. </br>
+                            From bold, aromatic spices to soothing, hearty bites, each plate invites you to explore and savor at your own pace. </br>
+                            Sit back, take a breath, and let your taste buds travel in a setting that feels like home. Welcome to the journey!</p>
+    <div class="sectors-container">
+        <!-- Sector 1 -->
+        <div class="sector">
+            <img src="~/img/italian.jpeg" alt="Food Image" class="sector-image">
+            <h3 class="sector-title">ITALIAN</h3>
+            <p class="sector-description">
+                Flavors of Italy: Classic Italian dishes brimming with rich, authentic flavors to transport you straight to the heart of Italy.
+            </p>
+        </div>
+
+        <!-- Sector 2 -->
+        <div class="sector">
+            <img src="~/img/seafood.jpg" alt="Beverage Image" class="sector-image">
+            <h3 class="sector-title">SEAFOOD</h3>
+            <p class="sector-description">
+                Ocean's Delight: Fresh and flavorful seafood dishes crafted to bring the taste of the sea right to your plate.
+            </p>
+        </div>
+
+        <!-- Sector 3 -->
+        <div class="sector">
+            <img src="~/img/vegan.jpg" alt="Dessert Image" class="sector-image">
+            <h3 class="sector-title">VEGAN</h3>
+            <p class="sector-description">
+                Plant-Powered Plates: Delicious, wholesome vegan dishes that celebrate the vibrant flavors of nature.
+            </p>
+        </div>
+    </div>
+</div>
+
+@*get-in-touch*@
+<div class="get-in-touch-cont">
+    <h1 class="text-center">CRAVING SOME HOME COOKED MEALS?</h1>
+
+    <div class="button-group text-center">
+        <a href="/order" class="btn btn-primary order-btn">Order Online</a>
+        <a href="/reservation" class="btn btn-secondary reservation-btn">Reservation</a>
+    </div>
+</div>
+
+@*restauran infor*@
+<section class="restaurant-info text-center">
+    <h2>SEE YOU SOON!</h2>
+    <p><strong>Address:</strong> A35 Bach Dang Street, Ward 2, Tan Binh District, HCM</p>
+    <p><strong>Hours:</strong> Mon-Sat: 10:00 AM - 10:00 PM, Sun: 11:00 AM - 8:00 PM</p>
+    <p><strong>Contact:</strong> 0387 148 555</p>
+    <p><strong>Email:</strong> info@relaxingkoala.com</p>
+
+    <div class="social-media-icons">
+        <a href="https://www.facebook.com/swinburnevntoday/" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/swinburnevietnam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon ins"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/Swinburne" target="_blank" class="social-icon x"><i class="fab fa-twitter"></i></a>
+    </div>
+</section>

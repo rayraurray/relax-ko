@@ -4,70 +4,73 @@
 }
 
 @* THIS IS MENU *@
+<div class="menu-container">
 
-<a asp-action="AssignMenu" class="btn btn-primary">Add New Menu</a>
+    <h1 class="menu-text text-center">List of Menus</h1>
 
-<h1>List of Menus</h1>
+    <a asp-action="AssignMenu" class="btn btn-primary new-menu-btn">Add New Menu</a>
 
-<form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
-    <div>
-        <label class="form-label">Filter With Menu Item</label>
 
-        <select class="form-control" id="menuItemSelect" name="menuItemId">
+    <form asp-action="ChangeMenuItems" method="post" id="menuItemForm">
+        <div>
+            <label class="form-label">Filter With Menu Item</label>
 
-            <option value="">Select Menu Item</option>
+            <select class="form-control" id="menuItemSelect" name="menuItemId">
 
-            @foreach (MenuItem menuItem in ViewBag.MenuItems)
-            {
-                if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                <option value="">Select Menu Item</option>
+
+                @foreach (MenuItem menuItem in ViewBag.MenuItems)
                 {
-                    <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                    if (ViewBag.SelectedMenuItems != null && ViewBag.SelectedMenuItems == menuItem.MenuItemId)
+                    {
+                        <option value="@menuItem.MenuItemId" selected>@menuItem.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                    }
                 }
-                else
+
+            </select>
+        </div>
+
+        <script>
+            var selectElement = document.getElementById('menuItemSelect');
+            //Add event listener for change event
+            selectElement.addEventListener(
+                'change', 
+                function () 
                 {
-                    <option value="@menuItem.MenuItemId">@menuItem.Name</option>
+                    var formElement = document.getElementById('menuItemForm');
+                    formElement.submit();
                 }
-            }
+            )
+        </script>
 
-        </select>
-    </div>
+    </form>
 
-    <script>
-        var selectElement = document.getElementById('menuItemSelect');
-        //Add event listener for change event
-        selectElement.addEventListener(
-            'change', 
-            function () 
-            {
-                var formElement = document.getElementById('menuItemForm');
-                formElement.submit();
-            }
-        )
-    </script>
+    <table class="table table-striped">
+	    <thead>
+		    <th>Name</th>
+		    <th>Description</th>
+		    <th>Menu Items</th>
+            <th>Delete</th>
+	    </thead>
 
-</form>
-
-<table class="table table-striped">
-	<thead>
-		<th>Name</th>
-		<th>Description</th>
-		<th>Menu Items</th>
-        <th>Delete</th>
-	</thead>
-
-	<tbody>
-		@foreach (var menu in Model)
-		{
-			<tr>
-				<td>@menu.Name</td>
-				<td>@menu.Description</td>
-				<td>
-					<a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-info">Edit Menu Items</a>
-				</td>
-                <td>
-                    <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn btn-danger">Delete</a>
-                </td>
-			</tr>
-		}
-	</tbody>
-</table>
+	    <tbody>
+		    @foreach (var menu in Model)
+		    {
+			    <tr>
+				    <td>@menu.Name</td>
+				    <td>@menu.Description</td>
+				    <td>
+					    <a asp-action="EditMenu" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn edit-menu-btn">Edit Menu Items</a>
+				    </td>
+                    <td>
+                        <a asp-action="Delete" asp-controller="Menu" asp-route-menuId="@menu.MenuId" class="btn delete-menu-btn">Delete</a>
+                    </td>
+			    </tr>
+		    }
+	    </tbody>
+    </table>
+</div>
