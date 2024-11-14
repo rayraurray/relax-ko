@@ -5,8 +5,21 @@
 
 <h1>Edit Menu Item Details for @Model.Name</h1>
 
-<form asp-action="ModifyMenuItemMenus">
+<form asp-action="ModifyMenuItem">
 
+	@* Name *@
+	<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Name</label>
+	<input type="text" id="name" name="name" class="form-control" value="@Model.Name" />
+
+	@* Description *@
+	<label style="font-weight: bold; font-size: 1.5rem;">Menu Item Description</label>
+	<input type="text" id="description" name="description" class="form-control" value="@Model.Description" />
+
+	@* Price *@
+	<label for="amount" style="font-weight: bold; font-size: 1.5rem;">Price</label>
+	<input type="number" id="price" name="price" class="form-control" step="0.01" value="@Model.Price" />
+
+	<label style="font-weight: bold; font-size: 1.5rem;">Menus</label>
 	@foreach (var menu in ViewBag.Menus)
 	{
 		<div class="form-check">
@@ -20,6 +33,7 @@
 			<label class="form-check-label" for="@menu.MenuId">@menu.Name</label>
 		</div>
 	}
+
 	<input type="hidden" name="menuItemId" value="@Model.MenuItemId" />
 
 	<button type="submit" class="btn btn-primary">Save Changes</button>

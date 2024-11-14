@@ -75,7 +75,6 @@ namespace RelaxingKoala.Controllers
         [HttpGet]
         public async Task<IActionResult> EditMenu(int menuId)
         {
-
             var menu = await _context.Menus.Include(m => m.Items).FirstOrDefaultAsync(m => m.MenuId == menuId);
 
 			ViewBag.MenuItems = await _context.MenuItems.ToListAsync();
@@ -84,7 +83,7 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ModifyMenuMenuItems(Menu m, string[] assignedMenuItems)
+        public async Task<IActionResult> ModifyMenu(Menu m, string[] assignedMenuItems, string name, string description)
         {
             Menu menu = await _context.Menus.Where(mn => mn.MenuId == m.MenuId).Include(mn => mn.Items).FirstOrDefaultAsync();
 
@@ -98,6 +97,9 @@ namespace RelaxingKoala.Controllers
                     menu.Items.Add(i);
                 }
             }
+
+            menu.Name = name;
+            menu.Description = description;
 
             await _context.SaveChangesAsync();
 

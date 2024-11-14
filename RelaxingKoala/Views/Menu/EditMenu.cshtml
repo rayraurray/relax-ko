@@ -5,8 +5,17 @@
 
 <h1>Edit Menu Details for @Model.Name</h1>
 
-<form asp-action="ModifyMenuMenuItems">
+<form asp-action="ModifyMenu">
 
+	@* Name *@
+	<label style="font-weight: bold; font-size: 1.5rem;">Menu Name</label>
+	<input type="text" id="name" name="name" class="form-control" value="@Model.Name" />
+
+	@* Description *@
+	<label style="font-weight: bold; font-size: 1.5rem;">Menu Description</label>
+	<input type="text" id="description" name="description" class="form-control" value="@Model.Description" />
+
+	<label style="font-weight: bold; font-size: 1.5rem;">Menus</label>
 	@foreach(var menuItem in ViewBag.MenuItems)
 	{
 		<div class="form-check">
