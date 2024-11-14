@@ -53,7 +53,7 @@
         <th>ID</th>
         <th>Menu Item</th>
         <th>Number Of Orders</th>
-        <th>AverageOrderTime</th>
+        <th>Average Order Time</th>
         <th>Recorded Date</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -66,7 +66,7 @@
                     <td>@stat.StatisticsId</td>
                     <td>@stat.MenuItem.Name</td>
                     <td>@stat.NumberOfOrders</td>
-                    <td>@stat.AverageOrderTime</td>
+                    <td>@stat.AverageOrderTime minutes</td>
                     <td>@stat.RecordedDate</td>
                     <td>
                         <a asp-action="EditStatistics" asp-controller="Statistics" asp-route-statId="@stat.StatisticsId" class="btn edit-menu-btn">Edit Statistics</a>

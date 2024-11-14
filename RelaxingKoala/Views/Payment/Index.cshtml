@@ -90,7 +90,7 @@
                             @:Unknown
                         }
                     </td>
-                    <td>@payment.Amount</td>
+                    <td>$@payment.Amount</td>
                     <td>@(payment.PaymentStatus ? "Completed" : "Incompleted")</td>
                     <td>
                         <a asp-action="EditPayment" asp-controller="Payment" asp-route-paymentId="@payment.PaymentId" class="btn edit-menu-btn">Edit Payment</a>
