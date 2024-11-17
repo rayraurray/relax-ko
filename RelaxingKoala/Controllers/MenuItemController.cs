@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
 using RelaxingKoala.Models;
@@ -18,6 +19,13 @@ namespace RelaxingKoala.Controllers
         {
             ViewBag.Menus = await _context.Menus.ToListAsync();
 
+            if (User.IsInRole("Customer"))
+            {
+                // If the user is a Customer, they should only see the menu items without any editing options
+                return View(await _context.MenuItems.ToListAsync());
+            }
+
+            // For Managers or Staff, return the full MenuItem List with edit and delete options
             return View(await _context.MenuItems.ToListAsync());
         }
 
@@ -40,6 +48,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", filteredMenuItems);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> AssignMenuItem()
         {
@@ -49,6 +58,7 @@ namespace RelaxingKoala.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public async Task<IActionResult> AssignMenuItem(MenuItem i, string[] assignedMenus)
         {
@@ -72,6 +82,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", menuItems);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> EditMenuItem(int menuItemId)
         {
@@ -84,6 +95,7 @@ namespace RelaxingKoala.Controllers
             return View(menuItem);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public async Task<IActionResult> ModifyMenuItem(MenuItem i, string[] assignedMenus, string name, string description, float price)
         {
@@ -112,12 +124,14 @@ namespace RelaxingKoala.Controllers
             return View("Index", menuItems);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> Delete(int menuItemId)
         {
             return View(await _context.MenuItems.FindAsync(menuItemId));
         }
 
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(MenuItem i)
         {
             MenuItem menuItem = await _context.MenuItems.Where(mi => mi.MenuItemId == i.MenuItemId).Include(mi => mi.Menus).FirstOrDefaultAsync();

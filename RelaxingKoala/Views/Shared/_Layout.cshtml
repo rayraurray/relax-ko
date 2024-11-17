@@ -46,48 +46,52 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MenuItem" asp-action="Index">Menu</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Menu" asp-action="Index">Menus</a>
-                        </li>
+                        @if (User.IsInRole("Manager") || User.IsInRole("Staff"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MenuItem" asp-action="Index">Menu Items</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Menu" asp-action="Index">Modify Menus</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Kitchen" asp-action="Index">Kitchen Orders</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Kitchen" asp-action="Index">Kitchen Orders</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Statistics" asp-action="Index">Statistics</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Statistics" asp-action="Index">Statistics</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">Orders</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">Orders</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customers</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customers</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Index">Reservations</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Index">Reservations</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="RestaurantTable" asp-action="Index">Tables</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="RestaurantTable" asp-action="Index">Tables</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Payments</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Payments</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Delivery" asp-action="Index">Deliveries</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Delivery" asp-action="Index">Deliveries</a>
+                            </li>
+                        }
+                        
 
                     </ul>
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
 using RelaxingKoala.Models;
@@ -14,6 +15,7 @@ namespace RelaxingKoala.Controllers
             _context = context;
         }
 
+        
         public async Task<IActionResult> Index()
         {
             ViewBag.MenuItems = await _context.MenuItems.ToListAsync();
@@ -21,6 +23,7 @@ namespace RelaxingKoala.Controllers
             return View(await _context.Menus.ToListAsync());
         }
 
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> ChangeMenuItems(int menuItemId)
         {
             List<Menu> filteredMenus;
@@ -40,6 +43,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", filteredMenus);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> AssignMenu()
         {
@@ -49,6 +53,7 @@ namespace RelaxingKoala.Controllers
 			return View();
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public async Task<IActionResult> AssignMenu(Menu m, string[] assignedMenuItems)
         {
@@ -72,6 +77,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", menus);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> EditMenu(int menuId)
         {
@@ -82,6 +88,7 @@ namespace RelaxingKoala.Controllers
             return View(menu);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public async Task<IActionResult> ModifyMenu(Menu m, string[] assignedMenuItems, string name, string description)
         {
@@ -109,6 +116,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", menus);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> Delete(int menuId)
         {

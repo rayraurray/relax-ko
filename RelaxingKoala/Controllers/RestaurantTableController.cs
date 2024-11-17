@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
 using RelaxingKoala.Models;
 
 namespace RelaxingKoala.Controllers
 {
+    [Authorize(Roles = "Manager, Staff")]
     public class RestaurantTableController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -105,6 +107,7 @@ namespace RelaxingKoala.Controllers
             return View("Index", tables);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
 		public async Task<IActionResult> Delete(int restaurantTableId)
 		{
@@ -113,7 +116,8 @@ namespace RelaxingKoala.Controllers
             return View(table);
 		}
 
-		[HttpPost]
+        [Authorize(Roles = "Manager")]
+        [HttpPost]
 		public async Task<IActionResult> Delete(RestaurantTable t)
         {
             RestaurantTable table = await _context.RestaurantTables

@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography.Pkcs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
@@ -6,6 +7,7 @@ using RelaxingKoala.Models;
 
 namespace RelaxingKoala.Controllers
 {
+    [Authorize(Roles = "Manager, Staff")]
     public class CustomerController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -127,6 +129,7 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> EditCustomer(int customerId)
         {
             var customer = await _context.Customers
@@ -149,6 +152,7 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> ModifyCustomer(Customer c, string[] assignedOrders, string[] assignedReservations, string[] assignedPayments, string name, string contactInfo)
         {
             Customer customer = await _context.Customers.Where(cu => cu.CustomerId == c.CustomerId)
@@ -206,12 +210,14 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(int customerId)
         {
             return View(await _context.Customers.FindAsync(customerId));
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(Customer c)
         {
             Customer customer = await _context.Customers.Where(cu => cu.CustomerId == c.CustomerId)

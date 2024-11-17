@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
 using RelaxingKoala.Models;
 
 namespace RelaxingKoala.Controllers
 {
+    [Authorize(Roles = "Manager, Staff")]
     public class DeliveryController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -91,6 +93,7 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> EditDelivery(int deliveryId)
         {
             var delivery = await _context.Deliveries
@@ -138,12 +141,14 @@ namespace RelaxingKoala.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(int deliveryId)
         {
             return View(await _context.Deliveries.FindAsync(deliveryId));
         }
 
         [HttpPost]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(Delivery d)
         {
             Delivery delivery = await _context.Deliveries.Where(de => de.DeliveryId == d.DeliveryId)

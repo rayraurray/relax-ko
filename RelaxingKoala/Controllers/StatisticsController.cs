@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
 using RelaxingKoala.Models;
 
 namespace RelaxingKoala.Controllers
 {
+    [Authorize(Roles = "Manager")]
 	public class StatisticsController : Controller
 	{
 		private readonly ApplicationDbContext _context;

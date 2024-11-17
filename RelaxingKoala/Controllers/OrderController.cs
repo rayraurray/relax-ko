@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelaxingKoala.Data;
@@ -6,7 +7,8 @@ using RelaxingKoala.Models;
 
 namespace RelaxingKoala.Controllers
 {
-	public class OrderController : Controller
+    [Authorize(Roles = "Manager, Staff")]
+    public class OrderController : Controller
 	{
 		private readonly ApplicationDbContext _context;
 
@@ -226,12 +228,14 @@ namespace RelaxingKoala.Controllers
             return View("Index", orders);
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpGet]
         public async Task<IActionResult> Delete(int orderId)
         {
             return View(await _context.Orders.FindAsync(orderId));
         }
 
+        [Authorize(Roles = "Manager")]
         [HttpPost]
         public async Task<IActionResult> Delete(Order o)
         {
