@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive - Swinburne University\\Desktop\\SWINBURNE\\Semester 7\\relax-ko\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|c:\\users\\admin\\onedrive - swinburne university\\desktop\\swinburne\\semester 7\\relax-ko\\relaxingkoala\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E701C6C-953D-4F31-9422-47AF08D09B04}|RelaxingKoala\\RelaxingKoala.csproj|solutionrelative:relaxingkoala\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Data\\Swinburne\\Soft\\ASM3\\relax-ko\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -19,25 +14,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 229,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive - Swinburne University\\Desktop\\SWINBURNE\\Semester 7\\relax-ko\\RelaxingKoala\\Program.cs",
-              "RelativeDocumentMoniker": "RelaxingKoala\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive - Swinburne University\\Desktop\\SWINBURNE\\Semester 7\\relax-ko\\RelaxingKoala\\Program.cs",
-              "RelativeToolTip": "RelaxingKoala\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T05:19:17.213Z",
-              "EditorCaption": ""
             }
           ]
         }

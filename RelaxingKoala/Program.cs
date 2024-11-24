@@ -66,10 +66,10 @@ public class Program
             // Define users
             var users = new[]
             {
-        new { Email = "customer@customer.com", Password = "Test1234!", Role = "Customer" },
-        new { Email = "manager@manager.com", Password = "Manager123!", Role = "Manager" },
-        new { Email = "staff@staff.com", Password = "Staff123!", Role = "Staff" }
-    };
+                new { Email = "customer@customer.com", Password = "Test1234!", Role = "Customer" },
+                new { Email = "manager@manager.com", Password = "Manager123!", Role = "Manager" },
+                new { Email = "staff@staff.com", Password = "Staff123!", Role = "Staff" }
+            };
 
             foreach (var userInfo in users)
             {
